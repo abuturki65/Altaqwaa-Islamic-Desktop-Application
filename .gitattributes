@@ -1,0 +1,10 @@
+# Large bundled data & audio → Git LFS (keeps the repo under GitHub's 100MB limit)
+resources/library/** filter=lfs diff=lfs merge=lfs -text
+resources/data/khutbah.json filter=lfs diff=lfs merge=lfs -text
+# resources/data/fatwas.json filter=lfs diff=lfs merge=lfs -text
+# resources/data/history.json filter=lfs diff=lfs merge=lfs -text
+# resources/data/geo.json filter=lfs diff=lfs merge=lfs -text
+# resources/data/tafseerMouaser.json filter=lfs diff=lfs merge=lfs -text
+# resources/data/quran.json filter=lfs diff=lfs merge=lfs -text
+# resources/data/IslamicQuiz.json filter=lfs diff=lfs merge=lfs -text
+# resources/audio/** filter=lfs diff=lfs merge=lfs -text

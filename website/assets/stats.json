@@ -1,0 +1,237 @@
+{
+  "updated_at": "2026-08-06T00:01:50.106Z",
+  "github": {
+    "repo": "rn0x/altaqwaa-desktop",
+    "html_url": "https://github.com/rn0x/altaqwaa-desktop",
+    "stars": 259,
+    "forks": 29,
+    "watchers": 9,
+    "total_downloads": 8315,
+    "releases_count": 17,
+    "assets_count": 120,
+    "platforms": {
+      "windows": {
+        "downloads": 3655,
+        "assets": 36
+      },
+      "linux": {
+        "downloads": 4660,
+        "assets": 84
+      }
+    },
+    "latest": {
+      "tag": "v3.0.1",
+      "name": "v3.0.1 ✨",
+      "published": "2023-03-15T23:32:36Z",
+      "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v3.0.1",
+      "assets": {
+        "windows": [
+          {
+            "name": "Altaqwaa.3.0.1-exe-portable.zip",
+            "size": 103933911,
+            "count": 575,
+            "url": "https://github.com/rn0x/altaqwaa-desktop/releases/download/v3.0.1/Altaqwaa.3.0.1-exe-portable.zip"
+          },
+          {
+            "name": "Altaqwaa.Setup.3.0.1-exe.zip",
+            "size": 210865016,
+            "count": 1701,
+            "url": "https://github.com/rn0x/altaqwaa-desktop/releases/download/v3.0.1/Altaqwaa.Setup.3.0.1-exe.zip"
+          }
+        ],
+        "linux": [
+          {
+            "name": "Altaqwaa-3.0.1-x86_64.flatpak",
+            "size": 109926136,
+            "count": 560,
+            "url": "https://github.com/rn0x/altaqwaa-desktop/releases/download/v3.0.1/Altaqwaa-3.0.1-x86_64.flatpak"
+          },
+          {
+            "name": "Altaqwaa-3.0.1.AppImage",
+            "size": 139357532,
+            "count": 574,
+            "url": "https://github.com/rn0x/altaqwaa-desktop/releases/download/v3.0.1/Altaqwaa-3.0.1.AppImage"
+          },
+          {
+            "name": "altaqwaa-3.0.1.tar.gz",
+            "size": 133974242,
+            "count": 118,
+            "url": "https://github.com/rn0x/altaqwaa-desktop/releases/download/v3.0.1/altaqwaa-3.0.1.tar.gz"
+          },
+          {
+            "name": "altaqwaa-3.0.1.x86_64.rpm",
+            "size": 108192793,
+            "count": 181,
+            "url": "https://github.com/rn0x/altaqwaa-desktop/releases/download/v3.0.1/altaqwaa-3.0.1.x86_64.rpm"
+          },
+          {
+            "name": "Altaqwaa.3.0.1-msi.zip",
+            "size": 120864467,
+            "count": 197,
+            "url": "https://github.com/rn0x/altaqwaa-desktop/releases/download/v3.0.1/Altaqwaa.3.0.1-msi.zip"
+          },
+          {
+            "name": "altaqwaa_3.0.1_amd64.deb",
+            "size": 108268510,
+            "count": 601,
+            "url": "https://github.com/rn0x/altaqwaa-desktop/releases/download/v3.0.1/altaqwaa_3.0.1_amd64.deb"
+          },
+          {
+            "name": "altaqwaa_3.0.1_amd64.snap",
+            "size": 124334080,
+            "count": 55,
+            "url": "https://github.com/rn0x/altaqwaa-desktop/releases/download/v3.0.1/altaqwaa_3.0.1_amd64.snap"
+          }
+        ]
+      }
+    },
+    "releases": [
+      {
+        "tag": "v3.0.1",
+        "name": "v3.0.1 ✨",
+        "published": "2023-03-15T23:32:36Z",
+        "downloads": 4562,
+        "assets": 9,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v3.0.1"
+      },
+      {
+        "tag": "v2.1.0",
+        "name": "v2.1.0 ✨",
+        "published": "2023-03-06T03:10:37Z",
+        "downloads": 356,
+        "assets": 8,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v2.1.0"
+      },
+      {
+        "tag": "v2.0.4",
+        "name": "v2.0.4 ✨",
+        "published": "2023-01-14T00:18:22Z",
+        "downloads": 319,
+        "assets": 8,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v2.0.4"
+      },
+      {
+        "tag": "v2.0.3",
+        "name": "v2.0.3 ✨",
+        "published": "2023-01-12T13:48:52Z",
+        "downloads": 225,
+        "assets": 8,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v2.0.3"
+      },
+      {
+        "tag": "v2.0.2",
+        "name": "v2.0.2 ✨",
+        "published": "2022-12-31T01:23:18Z",
+        "downloads": 300,
+        "assets": 8,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v2.0.2"
+      },
+      {
+        "tag": "v2.0.1",
+        "name": "v2.0.1 ✨",
+        "published": "2022-12-26T15:23:46Z",
+        "downloads": 161,
+        "assets": 8,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v2.0.1"
+      },
+      {
+        "tag": "v2.0.0",
+        "name": "v2.0.0 ✨",
+        "published": "2022-08-23T19:21:40Z",
+        "downloads": 486,
+        "assets": 8,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v2.0.0"
+      },
+      {
+        "tag": "v1.1.0",
+        "name": "v1.1.0 ✨",
+        "published": "2022-07-28T12:48:48Z",
+        "downloads": 315,
+        "assets": 7,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v1.1.0"
+      },
+      {
+        "tag": "v1.0.9",
+        "name": "v1.0.9✨",
+        "published": "2022-05-03T04:50:44Z",
+        "downloads": 286,
+        "assets": 7,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v1.0.9"
+      },
+      {
+        "tag": "v1.0.8",
+        "name": "v1.0.8✨",
+        "published": "2022-05-01T22:19:31Z",
+        "downloads": 111,
+        "assets": 7,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v1.0.8"
+      },
+      {
+        "tag": "v1.0.7",
+        "name": "v1.0.7 ✨",
+        "published": "2022-04-15T00:19:01Z",
+        "downloads": 127,
+        "assets": 6,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v1.0.7"
+      },
+      {
+        "tag": "v1.0.6",
+        "name": "v1.0.6 ✨",
+        "published": "2022-03-16T04:24:16Z",
+        "downloads": 344,
+        "assets": 6,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v1.0.6"
+      },
+      {
+        "tag": "v1.0.5",
+        "name": "v1.0.5 ✨",
+        "published": "2022-03-15T00:22:35Z",
+        "downloads": 112,
+        "assets": 6,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v1.0.5"
+      },
+      {
+        "tag": "v1.0.4",
+        "name": "v1.0.4 ✨",
+        "published": "2022-03-14T16:25:46Z",
+        "downloads": 209,
+        "assets": 6,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v1.0.4"
+      },
+      {
+        "tag": "v1.0.3",
+        "name": "v1.0.3 ✨",
+        "published": "2022-02-28T17:40:19Z",
+        "downloads": 160,
+        "assets": 6,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v1.0.3"
+      },
+      {
+        "tag": "v1.0.2",
+        "name": "v1.0.2 ✨",
+        "published": "2022-02-24T22:16:13Z",
+        "downloads": 117,
+        "assets": 6,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v1.0.2"
+      },
+      {
+        "tag": "v1.0.0",
+        "name": "الإصدار الأول 🥇",
+        "published": "2022-02-21T02:36:04Z",
+        "downloads": 125,
+        "assets": 6,
+        "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v1.0.0"
+      }
+    ]
+  },
+  "flathub": {
+    "available": true,
+    "downloads": null,
+    "url": "https://flathub.org/en/apps/org.altaqwaa.Altaqwaa"
+  },
+  "snap": {
+    "available": true,
+    "downloads": null,
+    "url": "https://snapcraft.io/altaqwaa"
+  }
+}

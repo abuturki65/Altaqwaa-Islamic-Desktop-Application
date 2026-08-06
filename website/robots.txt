@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://altaqwaa.i8x.net/sitemap.xml

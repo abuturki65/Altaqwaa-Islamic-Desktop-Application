@@ -1,0 +1,24 @@
+{
+  "description": "fixture",
+  "mainCategories": [
+    {
+      "id": 1,
+      "arabicName": "التفسير",
+      "englishName": "tafseer",
+      "description": "fixture",
+      "icons": "/icons/1.svg",
+      "topics": [
+        {
+          "name": "الفاتحة",
+          "slug": "al-faatihah",
+          "levelsData": {
+            "level1": [
+              { "id": 1, "q": "من أسماء سورة الفاتحة؟", "link": "https://example.com/1", "answers": [{ "answer": "فاتحة الكتاب", "t": 1 }, { "answer": "نور الهداية", "t": 0 }] },
+              { "id": 2, "q": "من فضائلها", "link": "https://example.com/2", "answers": [{ "answer": "حصول المناجاة", "t": 1 }, { "answer": "زيادة الرزق", "t": 0 }] }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

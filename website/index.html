@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO أساسي -->
+  <title>التقوى — تطبيق إسلامي لسطح المكتب | مجاني ومفتوح المصدر</title>
+  <meta name="description" content="التقوى: تطبيق إسلامي شامل لسطح المكتب — مصحف كامل بخط عثماني، أذكار، حصن المسلم، مواقيت الصلاة، ومكتبة تضم أكثر من 35,000 مادة. يعمل دون اتصال بالإنترنت، مجاني ومفتوح المصدر. متوفر لـ Linux و Windows." />
+  <meta name="keywords" content="التقوى, altaqwaa, قرآن, مصحف, أذكار, حصن المسلم, مواقيت الصلاة, تطبيق إسلامي, islamic app, quran desktop, open source" />
+  <meta name="author" content="Rayan Almalki" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://altaqwaa.i8x.net/" />
+  <meta name="theme-color" content="#0c1714" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="التقوى" />
+  <meta property="og:title" content="التقوى — تطبيق إسلامي لسطح المكتب" />
+  <meta property="og:description" content="مصحف كامل، أذكار، حصن المسلم، مواقيت الصلاة ومكتبة تضم أكثر من 35,000 مادة. مجاني ومفتوح المصدر، يعمل دون إنترنت." />
+  <meta property="og:image" content="assets/screenshot-light.png" />
+  <meta property="og:url" content="https://altaqwaa.i8x.net/" />
+  <meta property="og:locale" content="ar_SA" />
+
+  <!-- تويتر -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="التقوى — تطبيق إسلامي لسطح المكتب" />
+  <meta name="twitter:description" content="مصحف كامل، أذكار، مواقيت الصلاة ومكتبة إسلامية ضخمة. مجاني ومفتوح المصدر." />
+  <meta name="twitter:image" content="assets/screenshot-light.png" />
+
+  <!-- أيقونات -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+
+  <!-- الخطوط -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- بيانات منظمة (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "التقوى",
+    "alternateName": "Altaqwaa",
+    "operatingSystem": "Windows, Linux",
+    "applicationCategory": "EducationalApplication",
+    "applicationSubCategory": "Islamic",
+    "softwareVersion": "4.0.0",
+    "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "url": "https://altaqwaa.i8x.net/",
+    "downloadUrl": "https://github.com/rn0x/altaqwaa-desktop/releases",
+    "description": "تطبيق إسلامي شامل لسطح المكتب: مصحف كامل بخط عثماني، تفسير ميسر، أذكار، حصن المسلم، مواقيت الصلاة، مسبحة ومكتبة تضم أكثر من 35,000 مادة. يعمل دون اتصال بالإنترنت."
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== شريط التنقل ===== -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="التنقل الرئيسي">
+      <a class="brand" href="#top" aria-label="التقوى - الرئيسية">
+        <img class="brand-logo" src="assets/icon.png" alt="شعار التقوى" width="38" height="38" />
+        <span class="brand-name">التقوى</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#features">المميزات</a></li>
+        <li><a href="#screenshots">لقطات الشاشة</a></li>
+        <li><a href="#download">التنزيل</a></li>
+        <li><a href="#install">التثبيت</a></li>
+        <li><a href="#build">البناء</a></li>
+        <li><a href="#faq">الأسئلة</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="تبديل الوضع الليلي والنهاري" title="الوضع الليلي/النهاري">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a class="btn btn-ghost btn-sm" href="https://github.com/rn0x/altaqwaa-desktop" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.26 5.66.41.35.78 1.05.78 2.12v3.15c0 .3.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          GitHub
+        </a>
+      </div>
+
+      <button class="menu-btn" id="menu-btn" type="button" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== الواجهة الرئيسية ===== -->
+    <section class="hero">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          الإصدار <strong id="hero-version">4.0.0</strong> — مجاني ومفتوح المصدر إلى الأبد
+        </div>
+
+        <h1 class="hero-title">
+          التقوى
+          <span class="hero-sub">مصحف ومكتبة إسلامية شاملة لسطح المكتب</span>
+        </h1>
+
+        <p class="hero-desc">
+          تطبيق إسلامي متكامل يعمل <strong>دون اتصال بالإنترنت</strong>: المصحف كاملاً بخط عثماني،
+          التفسير الميسر، الأذكار، حصن المسلم، مواقيت الصلاة، والمسبحة، ومكتبة تضم
+          <strong>أكثر من 35,000 مادة</strong> — كلها محلياً على جهازك، بلا حسابات ولا تتبع ولا خوادم.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" id="btn-primary-download" href="https://github.com/rn0x/altaqwaa-desktop/releases" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span id="btn-primary-label">حمّل الآن</span>
+          </a>
+          <a class="btn btn-soft btn-lg" href="#download">
+            كل طرق التنزيل
+          </a>
+          <a class="btn btn-soft btn-lg" href="https://github.com/rn0x/altaqwaa-desktop" target="_blank" rel="noopener">
+            الكود المصدري
+          </a>
+        </div>
+        <p class="hero-hint" id="os-hint"></p>
+
+        <div class="hero-meta" aria-hidden="true">
+          <span>🖥️ Windows</span>
+          <span>🐧 Linux</span>
+          <span>📴 يعمل دون إنترنت</span>
+          <span>🔒 خصوصية تامة</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== الإحصائيات الحية ===== -->
+    <section class="stats" id="stats" aria-label="إحصائيات التحميل">
+      <div class="container stats-grid">
+        <div class="stat reveal">
+          <div class="stat-num" data-count data-suffix="">0</div>
+          <div class="stat-label">تحميل من GitHub Releases</div>
+          <a class="stat-note" href="#sources">كيف نحسبها؟</a>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num" data-count data-suffix="">0</div>
+          <div class="stat-label">إصدار رسمي</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num" data-count data-suffix="">0</div>
+          <div class="stat-label">نجمة على GitHub</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num">36,206</div>
+          <div class="stat-label">مادة في المكتبة</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== المميزات ===== -->
+    <section class="section" id="features">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">المميزات</span>
+          <h2>كل ما يحتاجه المسلم على جهازه</h2>
+          <p>ميزات مصممة بعناية لتجربة استخدام فريدة، وكلها تعمل محلياً دون اتصال.</p>
+        </header>
+
+        <div class="features-grid">
+          <article class="feature reveal">
+            <div class="feature-icon" style="--c:#0f766e">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3>المصحف كاملاً</h3>
+            <p>نص بخط عثماني (مجمع الملك فهد) مع التحكم بحجم الخط ووضع القراءة المريح، والتفسير الميسر بجانب كل آية.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-icon" style="--c:#b45309">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>الأذكار وحصن المسلم</h3>
+            <p>أذكار الصباح والمساء مع تذكيرات صوتية في أوقاتها، وحصن المسلم الكامل بالأدعية المنقحة لكل موقف.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-icon" style="--c:#0369a1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>مواقيت الصلاة والأذان</h3>
+            <p>حساب محلي بعشر طرق حسابية — لا يُرسل موقعك لأي جهة — مع تنبيه وصوت الأذان عند دخول الوقت.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-icon" style="--c:#7c3aed">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <h3>المسبحة</h3>
+            <p>تسبيح بإحصائيات يومية وشهرية وسنوية، مع إمكانية إنشاء أذكار مخصصة وعدّاد تكرار.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-icon" style="--c:#047857">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <h3>مكتبة ضخمة</h3>
+            <p>أكثر من 35,000 مادة: خطب، فتاوى، كتب، تاريخ إسلامي، أسئلة ومسابقات — بنقّابة بحث ذكية بلا إنترنت.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-icon" style="--c:#be123c">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <h3>القراء والإذاعات</h3>
+            <p>تلاوات بث مباشر أو تحميل محلي للاستماع دون إنترنت، و177 إذاعة قرآنية متعددة القنوات.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-icon" style="--c:#0d9488">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+            <h3>بحث عربي ذكي</h3>
+            <p>تصحيح إملائي، اقتراحات، وترجيح دلالي (BM25) على كامل المكتبة — حتى مع الأخطاء الكتابية الشائعة.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-icon" style="--c:#1d4ed8">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </div>
+            <h3>وضعان كاملان</h3>
+            <p>تصميم عربي RTL أنيق مع وضع ليلي ونهاري متكاملين، وتبديل فوري بينهما.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-icon" style="--c:#16a34a">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3>الخصوصية أولاً</h3>
+            <p>كل البيانات محلية: لا حسابات، لا تتبع، لا خوادم طرف ثالث. عزل كامل للواجهة وإجبار HTTPS.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-icon" style="--c:#ea580c">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+            </div>
+            <h3>تحديثات تلقائية</h3>
+            <p>فحص تلقائي للإصدارات الجديدة من المستودع الرسمي، مع تنبيه أنيق وإمكانية الإيقاف من الإعدادات.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-icon" style="--c:#0891b2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </div>
+            <h3>التقويم الهجري</h3>
+            <p>تاريخ هجري وميلادي دقيق، مدمج في الواجهة ليعرف المستخدم مواعيده وأيامه بسهولة.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-icon" style="--c:#65a30d">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            </div>
+            <h3>مفتوح المصدر GPL-3.0</h3>
+            <p>كود مفتوح بالكامل بموجب رخصة GPL-3.0، مجاني إلى الأبد — مساهمة الجميع مرحب بها عبر GitHub.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== لقطات الشاشة ===== -->
+    <section class="section section-alt" id="screenshots">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">لقطات الشاشة</span>
+          <h2>صمّمناها بعين تذوق الجمال</h2>
+          <p>واجهة عربية RTL أنيقة بوضعين ليلي ونهاري — قارن بنفسك.</p>
+        </header>
+
+        <div class="shot-tabs reveal" role="tablist" aria-label="اختيار الوضع">
+          <button class="shot-tab active" data-shot="light" role="tab" aria-selected="true">الوضع النهاري</button>
+          <button class="shot-tab" data-shot="dark" role="tab" aria-selected="false">الوضع الليلي</button>
+        </div>
+
+        <figure class="shot-frame reveal">
+          <img id="shot-img" src="assets/screenshot-light.png" alt="لقطة شاشة للتطبيق في الوضع النهاري" loading="lazy" width="1920" height="1080" />
+          <figcaption id="shot-caption">الوضع النهاري</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== التنزيل ===== -->
+    <section class="section" id="download">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">التنزيل</span>
+          <h2>اختر نظامك واحمّل مباشرة</h2>
+          <p>جميع الملفات من صفحة الإصدارات الرسمية على GitHub — تُختم ويُتحقق منها قبل نشرها.</p>
+        </header>
+
+        <div class="dl-tabs reveal" id="platform-tabs" role="tablist" aria-label="اختيار النظام">
+          <button class="dl-tab active" data-platform="windows" role="tab" aria-selected="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.55L10.5 4.5v6.9H3v-5.85zm0 12.9l7.5 1.05v-6.45H3v5.4zM10.5 4.35L21 3v8.4h-10.5V4.35zM21 12.6v8.4l-10.5-1.35V12.6H21z"/></svg>
+            Windows
+          </button>
+          <button class="dl-tab" data-platform="linux" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c.5 0 .9.2 1.2.5.3.4.5.8.5 1.3v1.2c.6.1 1.2.3 1.7.7l1.1-.7c.3-.2.7-.2 1 0 .3.2.5.5.5.9 0 .2-.1.4-.2.6l-.9 1.2c.2.5.3 1.1.3 1.7 0 .4-.1.8-.2 1.1l1.3.6c.5.3.8.8.8 1.4v2c0 .4-.2.8-.5 1.1-.3.3-.7.5-1.1.5h-.3c.2.4.4.8.5 1.2.3.9.6 2 .6 3.1 0 1.1-.2 2-.6 2.7-.4.8-1 1.2-1.7 1.2H10c-.7 0-1.3-.4-1.7-1.2-.4-.7-.6-1.6-.6-2.7 0-1.1.3-2.2.6-3.1.1-.4.3-.8.5-1.2h-.3c-.4 0-.8-.2-1.1-.5-.3-.3-.5-.7-.5-1.1v-2c0-.6.3-1.1.8-1.4l1.3-.6c-.1-.3-.2-.7-.2-1.1 0-.6.1-1.2.3-1.7l-.9-1.2c-.1-.2-.2-.4-.2-.6 0-.4.2-.7.5-.9.3-.2.7-.2 1 0l1.1.7c.5-.4 1.1-.6 1.7-.7V3.8c0-.5.2-.9.5-1.3C11.1 2.2 11.5 2 12 2zm0 2.2c-.2 0-.4.1-.5.3-.1.1-.1.3-.1.5v.8h1.2v-.8c0-.2-.1-.4-.2-.5-.1-.2-.2-.3-.4-.3zm-2 5.3c.5.3 1.1.5 1.7.5.8 0 1.5-.2 2.1-.5-.2-.7-.7-1.3-1.3-1.8-.3.4-.6.7-1 1-.3.3-.5.5-.8.6-.2.1-.4.2-.7.2zm2.2-1.3c.4-.1.7-.3 1-.5-.3.2-.6.4-.9.5h-.1zM8.5 12c.5.6 1.2 1 2 1.2-.1-.6-.3-1.2-.7-1.7l-.4-.5c-.3.3-.6.7-.9.9.1.1.1.1 0 .1zm7 0c-.2-.2-.5-.5-.8-.9l-.4.5c-.4.5-.6 1.1-.7 1.7.8-.2 1.5-.6 2-1.2 0 0-.1 0-.1-.1zm-4.5.7c0 .6 0 1.2.1 1.8h1.8c.1-.6.1-1.2.1-1.8-.4-.1-.8-.1-1.2-.1s-.7.1-1 0zm.1 3.3c.3.3.6.6.9.9.3.3.6.6.8.9.2.2.4.4.6.6.1.2.2.4.2.6.1.3.1.5.1.8 0 .5-.1.9-.2 1.2-.1.4-.3.6-.5.6h-.1c.1-.2.1-.5.1-.7 0-.6-.1-1.2-.3-1.8-.2-.5-.5-1-.8-1.4l-.5-.5c-.2.2-.3.3-.5.5-.3.4-.6.9-.8 1.4-.2.6-.3 1.2-.3 1.8 0 .2 0 .5.1.7h-.1c-.2 0-.4-.2-.5-.6-.1-.3-.2-.7-.2-1.2 0-.3 0-.5.1-.8.1-.2.2-.4.2-.6.2-.2.4-.4.6-.6.3-.3.5-.6.8-.9.3-.3.6-.6.9-.9.2-.1.4-.2.6-.2s.4.1.6.2z"/></svg>
+            Linux
+          </button>
+          <button class="dl-tab" data-platform="store" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            المتاجر
+          </button>
+          <button class="dl-tab" data-platform="source" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            الكود المصدري
+          </button>
+        </div>
+
+        <!-- لوحة ويندوز -->
+        <div class="dl-panel active" data-panel="windows" role="tabpanel">
+          <p class="dl-note">آخر إصدار: <strong id="win-version">v3.0.1</strong> — اختر صيغة التثبيت المناسبة لك:</p>
+          <div class="dl-cards" id="win-assets">
+            <!-- تُملأ ديناميكياً من بيانات الإصدارات، مع بدائل ثابتة لمن لا يدعم JavaScript -->
+            <noscript>
+              <div class="dl-card">
+                <div class="dl-card-top">
+                  <span class="dl-type">تثبيت كامل</span>
+                  <span class="dl-name">Altaqwaa.Setup.3.0.1-exe.zip</span>
+                </div>
+                <div class="dl-meta"><span class="dl-size">210.9 MB</span></div>
+                <a class="btn btn-primary btn-sm" href="https://github.com/rn0x/altaqwaa-desktop/releases/download/v3.0.1/Altaqwaa.Setup.3.0.1-exe.zip">تحميل</a>
+              </div>
+            </noscript>
+          </div>
+        </div>
+
+        <!-- لوحة لينكس -->
+        <div class="dl-panel" data-panel="linux" role="tabpanel">
+          <p class="dl-note">آخر إصدار: <strong id="linux-version">v3.0.1</strong> — اختر الصيغة المناسبة لتوزيعتك:</p>
+          <div class="dl-cards" id="linux-assets">
+            <noscript>
+              <div class="dl-card">
+                <div class="dl-card-top"><span class="dl-type">AppImage</span><span class="dl-name">Altaqwaa-3.0.1.AppImage</span></div>
+                <div class="dl-meta"><span class="dl-size">139.4 MB</span></div>
+                <a class="btn btn-primary btn-sm" href="https://github.com/rn0x/altaqwaa-desktop/releases/download/v3.0.1/Altaqwaa-3.0.1.AppImage">تحميل</a>
+              </div>
+            </noscript>
+          </div>
+        </div>
+
+        <!-- لوحة المتاجر -->
+        <div class="dl-panel" data-panel="store" role="tabpanel">
+          <p class="dl-note">الأسهل والأكثر أماناً: تثبيت من المتاجر الرسمية مع تحديثات تلقائية.</p>
+          <div class="dl-cards store-cards">
+            <div class="dl-card store-card">
+              <div class="store-logo" style="--c:#4a86d8">F</div>
+              <div>
+                <h3>Flathub</h3>
+                <p>حزمة Flatpak لأي توزيعة تدعم Flatpak.</p>
+              </div>
+              <div class="store-actions">
+                <a class="btn btn-primary btn-sm" href="https://flathub.org/en/apps/org.altaqwaa.Altaqwaa" target="_blank" rel="noopener">افتح في Flathub</a>
+              </div>
+            </div>
+            <div class="dl-card store-card">
+              <div class="store-logo" style="--c:#fa8334">S</div>
+              <div>
+                <h3>Snap Store</h3>
+                <p>حزمة Snap لأوبونتو والتوزيعات الداعمة.</p>
+              </div>
+              <div class="store-actions">
+                <a class="btn btn-primary btn-sm" href="https://snapcraft.io/altaqwaa" target="_blank" rel="noopener">افتح في Snap Store</a>
+              </div>
+            </div>
+          </div>
+          <p class="dl-footnote" id="sources">
+            ملاحظة عن العدّادات: <strong>GitHub Releases</strong> يعرض عدّاد تحميل رسمي لكل ملف ويُحتسب تلقائياً،
+            بينما <strong>Flathub و Snap Store</strong> لا يوفران عدّادات تحميل عامة عبر واجهاتهم البرمجية، لذلك تُحتسب
+            هنا تحميلات GitHub فقط لتجنّب الأرقام التخمينية.
+          </p>
+        </div>
+
+        <!-- لوحة الكود المصدري -->
+        <div class="dl-panel" data-panel="source" role="tabpanel">
+          <p class="dl-note">مشروع مفتوح المصدر 100% — استنسخ، اطّلع، وحسّن:</p>
+          <div class="dl-cards">
+            <div class="dl-card source-card">
+              <div class="source-top">
+                <span class="dl-type">GitHub</span>
+                <span class="dl-name">github.com/rn0x/altaqwaa-desktop</span>
+              </div>
+              <p class="source-desc">259+ نجمة · رخصة GPL-3.0 · جميع البيانات مرفقة داخل المستودع (عبر Git LFS).</p>
+              <div class="source-actions">
+                <button class="btn btn-ghost btn-sm copy-btn" data-copy="git clone https://github.com/rn0x/altaqwaa-desktop.git">نسخ رابط الاستنساخ</button>
+                <a class="btn btn-primary btn-sm" href="https://github.com/rn0x/altaqwaa-desktop" target="_blank" rel="noopener">افتح المستودع</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dl-footer reveal">
+          <a class="btn btn-soft" href="https://github.com/rn0x/altaqwaa-desktop/releases" target="_blank" rel="noopener">
+            جميع الإصدارات والملفات على GitHub Releases
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== التثبيت ===== -->
+    <section class="section section-alt" id="install">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">التثبيت</span>
+          <h2>طرق تثبيت متعددة تناسب الجميع</h2>
+          <p>اختر الطريقة الأنسب لنظامك — الأمر بسيط وواضح.</p>
+        </header>
+
+        <div class="cmd-list">
+          <div class="cmd-block reveal">
+            <div class="cmd-head">
+              <span class="cmd-os">🐧 Ubuntu / Debian / Snap</span>
+              <button class="copy-btn" data-copy="sudo snap install altaqwaa" type="button">نسخ</button>
+            </div>
+            <pre><code class="cmd-code"><span class="c-prompt">$</span> sudo snap install altaqwaa</code></pre>
+            <p class="cmd-desc">تثبيت مباشر من Snap Store — يتحدث تلقائياً.</p>
+          </div>
+
+          <div class="cmd-block reveal">
+            <div class="cmd-head">
+              <span class="cmd-os">🟦 أي توزيعة مع Flatpak</span>
+              <button class="copy-btn" data-copy="flatpak install flathub org.altaqwaa.Altaqwaa" type="button">نسخ</button>
+            </div>
+            <pre><code class="cmd-code"><span class="c-prompt">$</span> flatpak install flathub org.altaqwaa.Altaqwaa</code></pre>
+            <p class="cmd-desc">تثبيت من Flathub — يوفّر تحديثات وإزالة نظيفة.</p>
+          </div>
+
+          <div class="cmd-block reveal">
+            <div class="cmd-head">
+              <span class="cmd-os">🐧 AppImage (أي توزيعة)</span>
+              <button class="copy-btn" data-copy="chmod +x Altaqwaa-*.AppImage && ./Altaqwaa-*.AppImage" type="button">نسخ</button>
+            </div>
+            <pre><code class="cmd-code"><span class="c-prompt">$</span> chmod +x Altaqwaa-*.AppImage
+<span class="c-prompt">$</span> ./Altaqwaa-*.AppImage</code></pre>
+            <p class="cmd-desc">بدون تثبيت: حمّل، اجعل الملف قابلاً للتنفيذ، وشغّله.</p>
+          </div>
+
+          <div class="cmd-block reveal">
+            <div class="cmd-head">
+              <span class="cmd-os">🪟 Windows (Setup أو Portable)</span>
+              <button class="copy-btn" data-copy="Altaqwaa.Setup.*-exe.zip" type="button">نسخ</button>
+            </div>
+            <pre><code class="cmd-code"><span class="c-prompt">$</span> # Setup: فك الضغط ثم شغّل المثبّت
+<span class="c-prompt">$</span> # Portable: فك الضغط ثم شغّل الملف مباشرة</code></pre>
+            <p class="cmd-desc">المثبّت يتيح اختيار مجلد التثبيت، والمحمول يعمل دون تثبيت.</p>
+          </div>
+
+          <div class="cmd-block reveal">
+            <div class="cmd-head">
+              <span class="cmd-os">📦 من الكود المصدري</span>
+              <button class="copy-btn" data-copy="git lfs install
+git clone https://github.com/rn0x/altaqwaa-desktop.git
+cd altaqwaa-desktop
+npm install
+npm start" type="button">نسخ</button>
+            </div>
+            <pre><code class="cmd-code"><span class="c-prompt">$</span> git lfs install                <span class="c-comment"># فعّل Git LFS (مرة واحدة)</span>
+<span class="c-prompt">$</span> git clone https://github.com/rn0x/altaqwaa-desktop.git
+<span class="c-prompt">$</span> cd altaqwaa-desktop
+<span class="c-prompt">$</span> npm install
+<span class="c-prompt">$</span> npm start</code></pre>
+            <p class="cmd-desc"><strong>مهم:</strong> ملفات البيانات الكبيرة (القرآن، المكتبة، الصوتيات) مخزنة عبر Git LFS — بدون تفعيله لن يعمل التطبيق.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== البناء والتطوير ===== -->
+    <section class="section" id="build">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">التطوير والبناء</span>
+          <h2>بيئة مطوّرين جاهزة للمساهمة</h2>
+          <p>Electron + React 19 + Vite — تعليمات واضحة لبناء وتغليف كل الأنظمة.</p>
+        </header>
+
+        <div class="build-grid">
+          <div class="cmd-block reveal">
+            <div class="cmd-head"><span class="cmd-os">⚡ التطوير</span><button class="copy-btn" data-copy="npm run dev" type="button">نسخ</button></div>
+            <pre><code class="cmd-code"><span class="c-prompt">$</span> npm install        <span class="c-comment"># تثبيت الاعتماديات</span>
+<span class="c-prompt">$</span> npm run dev        <span class="c-comment"># Vite + Electron (Hot Reload)</span>
+<span class="c-prompt">$</span> npm test           <span class="c-comment"># 27 اختباراً</span></code></pre>
+          </div>
+
+          <div class="cmd-block reveal">
+            <div class="cmd-head"><span class="cmd-os">🐧 حزم Linux</span><button class="copy-btn" data-copy="npm run packlinux" type="button">نسخ</button></div>
+            <pre><code class="cmd-code"><span class="c-prompt">$</span> npm run build      <span class="c-comment"># بناء الواجهة</span>
+<span class="c-prompt">$</span> npm run packlinux  <span class="c-comment"># AppImage + deb + rpm + tar.gz</span></code></pre>
+            <p class="cmd-desc">يتطلب Node.js 20+ و Git LFS. على Fedora/RHEL ثبّت <code>libxcrypt-compat</code>.</p>
+          </div>
+
+          <div class="cmd-block reveal">
+            <div class="cmd-head"><span class="cmd-os">🪟 حزم Windows</span><button class="copy-btn" data-copy="npm run packwin" type="button">نسخ</button></div>
+            <pre><code class="cmd-code"><span class="c-prompt">$</span> npm run packwin   <span class="c-comment"># Setup.exe (NSIS) + Portable.exe</span></code></pre>
+            <p class="cmd-desc">البناء من Linux يتطلب Wine لتضمين الأيقونة والمعلومات — أو ابنِ من Windows مباشرة.</p>
+          </div>
+
+          <div class="cmd-block reveal">
+            <div class="cmd-head"><span class="cmd-os">📦 تغليف شامل</span><button class="copy-btn" data-copy="npm run dist" type="button">نسخ</button></div>
+            <pre><code class="cmd-code"><span class="c-prompt">$</span> npm run dist      <span class="c-comment"># كل الأنظمة</span>
+<span class="c-prompt">$</span> npm run clean      <span class="c-comment"># حذف مجلد البناء</span></code></pre>
+            <p class="cmd-desc">كل البيانات (36,206 مادة) تُضمَّن تلقائياً داخل الحزمة — لا حاجة لأي تحميل بعد التثبيت.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== الأسئلة الشائعة ===== -->
+    <section class="section section-alt" id="faq">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">الأسئلة الشائعة</span>
+          <h2>أسئلة يكثر طرحها</h2>
+        </header>
+
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary>هل التطبيق مجاني فعلاً؟</summary>
+            <p>نعم، مجاني ومفتوح المصدر بالكامل بموجب رخصة GPL-3.0، وهو صدقة جارية — لا إعلانات، لا اشتراكات، لا بيانات يُجمعها أحد.</p>
+          </details>
+          <details class="faq-item">
+            <summary>هل يعمل دون اتصال بالإنترنت؟</summary>
+            <p>أغلب الميزات تعمل دون إنترنت تماماً: المصحف، التفسير، الأذكار، المكتبة كاملة، ومواقيت الصلاة (حساب محلي). فقط القراء والإذاعات (البث المباشر) تحتاج إنترنت — ويمكنك تحميل التلاوات للاستماع المحلي.</p>
+          </details>
+          <details class="faq-item">
+            <summary>هل توجد نسخة لنظام macOS؟</summary>
+            <p>لا يوجد إصدار رسمي لـ macOS بعد — البناء يتطلب جهاز Mac أو خط CI مخصص. تابع صفحة الإصدارات لمعرفة الجديد، أو ابنِه من الكود المصدري على جهاز Mac بنفسك.</p>
+          </details>
+          <details class="faq-item">
+            <summary>لماذا يجب تثبيت Git LFS عند البناء من الكود؟</summary>
+            <p>ملفات البيانات الضخمة (القرآن بالخط العثماني، المكتبة ~344MB، الصوتيات) مخزنة في المستودع عبر Git LFS. بدون تفعيله ستُستنسخ الملفات ناقصة ولن يعمل التطبيق.</p>
+          </details>
+          <details class="faq-item">
+            <summary>كيف أتحقق من سلامة ملف التحميل؟</summary>
+            <p>تحمّل من صفحة الإصدارات الرسمية فقط (GitHub Releases / Flathub / Snap Store). جميع الملفات مبنية من الكود المصدري عبر أدوات موثوقة وروابط مباشرة من المستودع الرسمي.</p>
+          </details>
+          <details class="faq-item">
+            <summary>كيف يعمل فحص التحديثات؟</summary>
+            <p>يتحقق التطبيق تلقائياً من الإصدارات الجديدة على GitHub مرة كل 6 ساعات على الأكثر، ويظهر تنبيه أنيق عند توفر إصدار أحدث — ويمكنك إيقاف التنبيه من الإعدادات.</p>
+          </details>
+          <details class="faq-item">
+            <summary>هل يُرسل موقعي أو بياناتي لأي جهة؟</summary>
+            <p>لا. حساب مواقيت الصلاة محلي 100% (10 طرق حسابية)، والإعدادات والبيانات كلها على جهازك. الواجهة معزولة تماماً عن النظام ولا تتواصل إلا عبر جسر آمن.</p>
+          </details>
+          <details class="faq-item">
+            <summary>كيف أساهم في المشروع؟</summary>
+            <p>أهلاً بك! افتح المستودع على GitHub، اقرأ README، أبلغ عن الأخطاء أو اقترح ميزات في تبويب Issues، وساهم بطلبات الدمج (Pull Requests). يمكنك أيضاً دعم المطوّر عبر GitHub Sponsors.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== التذييل ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/icon.png" alt="شعار التقوى" width="44" height="44" />
+        <div>
+          <strong>التقوى</strong>
+          <p>مصحف ومكتبة إسلامية شاملة — مجاني ومفتوح المصدر إلى الأبد.</p>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>التحميل</h4>
+        <ul>
+          <li><a href="https://github.com/rn0x/altaqwaa-desktop/releases" target="_blank" rel="noopener">GitHub Releases</a></li>
+          <li><a href="https://flathub.org/en/apps/org.altaqwaa.Altaqwaa" target="_blank" rel="noopener">Flathub</a></li>
+          <li><a href="https://snapcraft.io/altaqwaa" target="_blank" rel="noopener">Snap Store</a></li>
+          <li><a href="#install">طرق التثبيت</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>المصادر</h4>
+        <ul>
+          <li><a href="https://github.com/rn0x/altaqwaa-desktop" target="_blank" rel="noopener">المستودع الرسمي</a></li>
+          <li><a href="https://github.com/rn0x/altaqwaa-desktop/issues" target="_blank" rel="noopener">الإبلاغ عن مشكلة</a></li>
+          <li><a href="https://github.com/sponsors/rn0x" target="_blank" rel="noopener">الدعم المالي</a></li>
+          <li><a href="LICENSE" target="_blank" rel="noopener">الترخيص GPL-3.0</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-stats">
+        <h4>إحصائيات حية</h4>
+        <ul id="footer-stats">
+          <li>تحميل من GitHub: <strong id="ft-total">…</strong></li>
+          <li>إصدارات: <strong id="ft-releases">…</strong></li>
+          <li>نجوم: <strong id="ft-stars">…</strong></li>
+          <li>آخر تحديث: <strong id="ft-updated">…</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>«هذا التطبيق صدقة جارية لكل من ساهم فيه أو نشره — ولا تحرمونا من دعائكم.»</p>
+      <p class="copyright">© <span id="year">2026</span> التقوى — مرخّص بموجب GNU GPL v3.0</p>
+    </div>
+
+    <button class="back-top" id="back-top" type="button" aria-label="العودة للأعلى">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

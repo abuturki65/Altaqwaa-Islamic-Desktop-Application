@@ -1,0 +1,37 @@
+name: تحديث إحصائيات التنزيل
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: استنساخ المستودع
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: تحديث ملف الإحصائيات
+        run: node .github/scripts/update-stats.mjs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: رفع التغيير
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet website/assets/stats.json; then
+            echo "لا تغيير في الإحصائيات — انتهى."
+          else
+            git add website/assets/stats.json
+            git commit -m "update: إحصائيات التنزيل [skip ci]"
+            git push
+          fi

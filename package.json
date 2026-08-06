@@ -1,103 +1,156 @@
 {
   "name": "altaqwaa",
-  "version": "3.0.1",
-  "homepage": "https://www.altaqwaa.org",
-  "description": "Altaqwaa - Islamic Desktop Application",
-  "main": "./src/index.js",
-  "type": "commonjs",
+  "version": "4.0.0",
+  "homepage": "https://altaqwaa.i8x.net",
+  "description": "Altaqwaa - Islamic Desktop Application (Electron + React)",
+  "desktopName": "org.altaqwaa.Altaqwaa",
+  "main": "./electron/main.mjs",
+  "type": "module",
   "author": {
-    "name": "Ryan Almalki",
-    "email": "ry2n711@gmail.com",
-    "url": "https://www.altaqwaa.org"
+    "name": "Rayan Almalki",
+    "email": "rn0x.me@gmail.com",
+    "url": "https://altaqwaa.i8x.net"
   },
   "license": "GPL-3.0",
   "scripts": {
-    "packwin": "electron-builder --windows",
-    "packlinux": "electron-builder --linux",
     "start": "electron .",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder",
-    "dev": "nodemon --exec electron ."
+    "dev": "node scripts/dev.mjs",
+    "dev:renderer": "vite",
+    "build": "vite build",
+    "clean": "node -e \"fs.rmSync('dist', { recursive: true, force: true })\"",
+    "pack": "npm run build && electron-builder --dir",
+    "pack:linux": "npm run build && electron-builder --linux",
+    "pack:appimage": "npm run build && electron-builder --linux AppImage",
+    "pack:deb": "npm run build && electron-builder --linux deb",
+    "pack:rpm": "npm run build && electron-builder --linux rpm",
+    "pack:flatpak": "npm run build && electron-builder --linux flatpak",
+    "pack:snap": "npm run build && electron-builder --linux snap",
+    "pack:pacman": "npm run build && electron-builder --linux pacman",
+    "pack:tar": "npm run build && electron-builder --linux tar.gz",
+    "pack:win": "npm run build && electron-builder --windows",
+    "pack:win:portable": "npm run build && electron-builder --windows portable",
+    "pack:mac": "npm run build && electron-builder --mac",
+    "packlinux": "npm run pack:linux",
+    "packwin": "npm run pack:win",
+    "dist": "npm run build && electron-builder",
+    "test": "node --test test/*.mjs"
   },
   "dependencies": {
     "adhan": "^4.4.3",
     "fs-extra": "^11.1.1",
-    "menubar": "^9.3.0",
+    "lucide-react": "^1.28.0",
     "moment-duration-format": "^2.3.2",
-    "moment-hijri": "^2.1.2",
-    "moment-timezone": "^0.5.43",
-    "node-fetch": "^2.6.7",
-    "v8-compile-cache": "^2.3.0"
+    "moment-hijri": "^3.0.0",
+    "moment-timezone": "^0.6.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "yauzl": "^3.4.0"
   },
   "devDependencies": {
-    "electron": "^22.3.2",
-    "electron-builder": "^23.6.0",
-    "nodemon": "^2.0.21"
+    "@vitejs/plugin-react": "^6.0.5",
+    "electron": "^43.3.0",
+    "electron-builder": "^26.15.3",
+    "vite": "^8.2.0"
   },
   "build": {
     "directories": {
       "buildResources": "resources"
     },
     "productName": "Altaqwaa",
+    "appId": "org.altaqwaa.Altaqwaa",
+    "copyright": "Copyleft 2023 Altaqwaa",
+    "files": [
+      "electron/**/*",
+      "dist/renderer/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "resources/data",
+        "to": "data"
+      },
+      {
+        "from": "resources/audio",
+        "to": "audio"
+      },
+      {
+        "from": "resources/icons",
+        "to": "icons"
+      },
+      {
+        "from": "resources/library",
+        "to": "library"
+      }
+    ],
     "publish": {
       "provider": "github",
       "owner": "rn0x",
       "repo": "Altaqwaa-Islamic-Desktop-Application",
       "protocol": "https"
     },
-    "appId": "org.altaqwaa.Altaqwaa",
-    "copyright": "Copyleft 🄯 2023 Altaqwaa",
-    "win": {
-      "icon": "./src/build/icons/icon.ico",
-      "signingHashAlgorithms": [
-        "sha256",
-        "sha1"
-      ],
-      "signAndEditExecutable": true,
-      "publisherName": "Ryan Almalki",
+    "linux": {
+      "category": "Education",
+      "icon": "./resources/icons",
+      "vendor": "Rayan Almalki",
+      "description": "Altaqwaa - Islamic Desktop Application",
+      "synopsis": "Islamic Desktop Application",
+      "syncDesktopName": true,
       "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64",
-            "ia32"
-          ]
-        },
-        {
-          "target": "portable"
-        },
-        {
-          "target": "msi"
-        }
+        "AppImage",
+        "deb",
+        "rpm",
+        "flatpak",
+        "tar.gz"
+      ]
+    },
+    "flatpak": {
+      "runtime": "org.freedesktop.Platform",
+      "runtimeVersion": "24.08",
+      "sdk": "org.freedesktop.Sdk",
+      "base": "org.electronjs.Electron2.BaseApp",
+      "baseVersion": "24.08",
+      "finishArgs": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--device=dri",
+        "--filesystem=home",
+        "--talk-name=org.freedesktop.Notifications"
+      ]
+    },
+    "snapcraft": {
+      "base": "core24",
+      "core24": {
+        "confinement": "strict",
+        "grade": "stable",
+        "summary": "Islamic Desktop Application",
+        "description": "Altaqwaa — Quran, adhkar, Hisn al-Muslim, prayer times and a large offline Islamic library.",
+        "stagePackages": [
+          "default"
+        ],
+        "useLXD": true
+      }
+    },
+    "win": {
+      "icon": "./resources/icons/icon.ico",
+      "signAndEditExecutable": true,
+      "target": [
+        "nsis",
+        "portable",
+        "msi"
       ]
     },
     "nsis": {
       "oneClick": "false",
       "perMachine": true,
       "allowToChangeInstallationDirectory": "true",
-      "installerIcon": "./src/build/icons/icon.ico",
-      "uninstallerIcon": "./src/build/icons/icon.ico",
-      "license": "./src/build/LICENSE.txt",
+      "license": "./LICENSE",
       "shortcutName": "التقوى",
       "uninstallDisplayName": "التقوى",
-      "installerSidebar": "./src/build/installerSidebar.bmp",
-      "uninstallerSidebar": "./src/build/installerSidebar.bmp",
-      "installerHeader": "./src/build/installerHeader.bmp"
-    },
-    "linux": {
-      "category": "Education",
-      "icon": "./src/build/icons/icon.icns",
-      "vendor": "Ryan Almalki",
-      "description": "Altaqwaa - Islamic Desktop Application",
-      "synopsis": "Islamic Desktop Application",
-      "target": [
-        "AppImage",
-        "deb",
-        "rpm",
-        "snap",
-        "flatpak",
-        "tar.gz"
-      ]
+      "installerIcon": "./resources/icons/icon.ico",
+      "uninstallerIcon": "./resources/icons/icon.ico"
     }
   }
 }

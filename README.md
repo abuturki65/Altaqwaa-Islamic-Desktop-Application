@@ -1,353 +1,240 @@
-> [!IMPORTANT]  
-> جار العمل على الإصدار الرابع من البرنامج, لن يتم بناء آخر التغييرات الى حين صدور الإصدار الجديد (v4)
-<br>
+# التقوى — Altaqwaa
 
-![preview|690x388](/screenshots/Featured_banner.png)
-<br>
+![version](https://img.shields.io/badge/version-4.0.0-0f766e)
+![license](https://img.shields.io/badge/license-GPL--3.0-success)
+![platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows-teal)
+![snap](https://img.shields.io/badge/Snap-altaqwaa-orange)
+![flathub](https://img.shields.io/badge/Flathub-org.altaqwaa.Altaqwaa-4a86d8)
 
-**تطبيق إسلامي مفتوح المصدر يعمل على أنظمة التشغيل ويندوز ولينكس سهل الإستخدام و جامع للكثير من الميزات التي يحتاجها المسلم في يومه**
+تطبيق إسلامي لسطح المكتب — **مصحف ومكتبة إسلامية شاملة** تعمل دون اتصال بالإنترنت، مبني بـ **Electron + React**، مجاني ومفتوح المصدر إلى الأبد بموجب رخصة **GPL-3.0**.
 
-<br>
+Altaqwaa is an offline-first Islamic desktop application: a full Quran, adhkar, Hisn al-Muslim, prayer times, and a 35,000+ item library (khutbahs, fatwas, books, Islamic history, quizzes) — all running locally on your device. No accounts, no tracking, no servers.
 
----
-
-# المحتويات
-
-- [المميزات](#مميزات-التطبيق)
-- [صور من داخل التطبيق](#صور-الشاشة)
-- [تنزيل التطبيق](#تنزيل-التطبيق)
-- [التحقق من وجود تحديثات](#التحقق-من-وجود-تحديثات)
-- [دعم لينكس](#دعم-لينكس)
-- [أسئلة شائعة](#أسئلة-شائعة)
-- [طرق المساهمة ودعم التطبيق](#المساهمة-في-المشروع)
-- [قم بتشغيل التطبيق في وضع المطور](#قم-بتشغيل-التطبيق-في-وضع-التطوير)
-- [بناء التطبيق من المصدر](#بناء-التطبيق-من-المصدر)
-- [التبعيات](#التبعيات)
-- [المصادر المستخدمة ](#المصادر)
-- [المساهمون](#المساهمون)
-- [مراجعات للتطبيق على اليوتيوب](#مراجعة-تطبيق-التقوى-في-قناة-nofarahtech-v210)
+المستودع الرسمي: **[github.com/rn0x/altaqwaa-desktop](https://github.com/rn0x/altaqwaa-desktop)**
 
 ---
 
-# مميزات التطبيق
+## لقطات الشاشة
 
-<br>
-
-- القرآن الكريم `نص و صوت`
-- مجموعة كبيرة من أذكار الصباح والمساء والطعام والنوم والصلاة
-- تسابيح وأدعية متنوعة
-- مواقيت الصلاة حسب إحداثيات موقعك والمنطقة الزمنية
-- تغير طريقة حساب أوقات الصلاة (**ام القرى , رابطة العالم الإسلامي والمزيد ...**)
-- إشعار صوتي (**للأذان**) بدخول وقت الصلاة
-- إشعار صوتي بـ أذكار الصباح والمساء بوقت مخصص
-- حصن المسلم (صوت)
-- إمكانية التعديل وتخصيص التطبيق
-- تصميم عصري وحديث ومريح للعين
-- مجاني ومفتوح المصدر بالكامل تحت رخصة جنو العمومية `GPL-3.0`
-- دعم نظامي التشغيل ويندوز ولينكس بحزم تثبيت مختلفة وتناسب الجميع
-
-<br>
+| الوضع الليلي | الوضع النهاري |
+|---|---|
+| ![الوضع الليلي](screenshots/home-dark.png) | ![الوضع النهاري](screenshots/home-light.png) |
 
 ---
 
-# صور الشاشة
+## المميزات
 
-<br>
-
-| **Dark Mode**                         | **Light Mode**                         |
-| :------------------------------------ | -------------------------------------- |
-| ![altaqwaa](/screenshots/dark/1.png)  | ![altaqwaa](/screenshots/light/1.png)  |
-| ![altaqwaa](/screenshots/dark/2.png)  | ![altaqwaa](/screenshots/light/2.png)  |
-| ![altaqwaa](/screenshots/dark/3.png)  | ![altaqwaa](/screenshots/light/3.png)  |
-| ![altaqwaa](/screenshots/dark/4.png)  | ![altaqwaa](/screenshots/light/4.png)  |
-| ![altaqwaa](/screenshots/dark/5.png)  | ![altaqwaa](/screenshots/light/5.png)  |
-| ![altaqwaa](/screenshots/dark/6.png)  | ![altaqwaa](/screenshots/light/6.png)  |
-| ![altaqwaa](/screenshots/dark/7.png)  | ![altaqwaa](/screenshots/light/7.png)  |
-| ![altaqwaa](/screenshots/dark/8.png)  | ![altaqwaa](/screenshots/light/8.png)  |
-| ![altaqwaa](/screenshots/dark/9.png)  | ![altaqwaa](/screenshots/light/9.png)  |
-| ![altaqwaa](/screenshots/dark/10.png) | ![altaqwaa](/screenshots/light/10.png) |
-
-<br>
-
-<div align="center">
-  
-  **صور كاملة لـ قائمة الإعدادات**
-  
-  ![altaqwaa](/screenshots/settings.png)
-
-
-</div>
-
-<br>
+- **المصحف كاملاً** — نص بخط عثماني (مجمع الملك فهد)، مع التحكم بحجم الخط ووضع القراءة المريح
+- **التفسير الميسر** — تفسير معاصر لكل آية، بجانب الآية مباشرة
+- **الأذكار** — أذكار الصباح والمساء مع تذكيرات صوتية في الأوقات المحددة
+- **حصن المسلم** — الأذكار والأدعية حسب الموقف، منقحة
+- **مواقيت الصلاة** — حساب محلي بـ 10 طرق حسابية (لا يُرسل موقعك لأي جهة)، مع تحديد الموقع يدوياً أو عبر GPS
+- **الأذان** — تنبيه وصوت الأذان عند دخول الوقت، مع خيار إضافة صوت أذان من جهازك
+- **المسبحة** — تسبيح مع إحصائيات يومية وشهرية وسنوية، وأذكار مخصصة
+- **المكتبة** — أكثر من 35,000 مادة: خطب، فتاوى، كتب، تاريخ إسلامي، أسئلة ومسابقات، تنقّب بذكاء
+- **القراء** — تلاوات بث مباشر، أو تحميل محلي للاستماع بدون إنترنت
+- **إذاعات قرآنية** — بث مباشر لقنوات قرآنية متعددة 177 إذاعة
+- **بحث عربي ذكي** — تصحيح إملائي، اقتراحات، وترجيح دلالي (BM25) على كامل المكتبة
+- **الوضع الليلي والنهاري** — تصميم عربي RTL أنيق مع وضعين كاملين
+- **الخصوصية أولاً** — كل البيانات محلية: لا حسابات، لا تتبع، لا خوادم طرف ثالث
+- **فحص التحديثات تلقائياً** — يتحقق من إصدار جديد من المستودع الرسمي على GitHub ويخبرك عند توفره
 
 ---
 
-# تنزيل التطبيق
+## التنزيل
 
-<br>
+### Linux
 
-<p align="center">
-  <a href="https://snapcraft.io/altaqwaa">
-    <img width='240' alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg">
-  </a>
+| الطريقة | الأمر |
+|---|---|
+| **Snap** | `sudo snap install altaqwaa` — [snapcraft.io/altaqwaa](https://snapcraft.io/altaqwaa) |
+| **Flatpak** | `flatpak install flathub org.altaqwaa.Altaqwaa` — [flathub.org](https://flathub.org/en/apps/org.altaqwaa.Altaqwaa) |
+| **AppImage / deb / rpm / flatpak / snap / Tar.gz** | من [صفحة الإصدارات](https://github.com/rn0x/altaqwaa-desktop/releases) — حمّل الملف المناسب لتوزيعتك وشغّله |
 
-  <a href='https://flathub.org/apps/details/org.altaqwaa.Altaqwaa'>
-    <img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-i-en.svg'/>
-  </a>
-</p>
+### Windows
 
+- حمّل ملف **`setup.exe`** (تثبيت) أو **`portable.exe`** (محمول بدون تثبيت) من [صفحة الإصدارات](https://github.com/rn0x/altaqwaa-desktop/releases)
+
+### من الكود المصدري
+
+> **متطلب أساسي: [Git LFS](https://git-lfs.com)** — ملفات البيانات الكبيرة (القرآن، الخطب، الفتاوى) والصوتيات مخزنة في المستودع عبر Git LFS، فبدون تفعيله لن تُحمَّل هذه الملفات ولن يعمل التطبيق.
 
 ```bash
-# FLATHUB
-flatpak install flathub org.altaqwaa.Altaqwaa
-
-# SNAPS
-sudo snap install altaqwaa
-```
-
-- **Linux**: [Download the .AppImage, .deb, .rpm, .flatpak, .snap or Tar.gz Archive](https://github.com/rn0x/Altaqwaa-Islamic-Desktop-Application/releases/latest)
-- **Windows**: [Download the setup .exe file portable or installable](https://github.com/rn0x/Altaqwaa-Islamic-Desktop-Application/releases/latest)
-
-<br>
-
----
-
-# التحقق من وجود تحديثات
-
-**التحديث التلقائي لايعمل على لينكس بالشكل المطلوب لم ولن يتم إضافته إلى عند إيجاد حل للمشكلة... لذلك تم إضافة طريقة للتحقق من وجود إصدارات جديدة من التطبيق في صفحة الإعدادات, عند الضغط على زر التحقق سيتحقق البرنامج من وجود إصدارات جديدة منشورة في المستودع...**
-`يمكن الحصول على تحديثات تلقائية فقط من خلال (Snap) حاليا.`
-
-#### لذلك عند صدور إصدار جديد من تطبيق التقوى يجب إعادة تثبيت تطبيق التقوى... (التحديث غير إجباري ولكنه مستحسن للحصول على آخر الميزات والإصلاحات)
-
-### مثال:
-
-<div align="center">
-
-![image](/screenshots/update.png)
-
-</div>
-
-
-<br>
-
----
-
-# دعم لينكس
-
-### دعم التطبيق للينكس أدى إلى فروقات بين تجربة المستخدمين بين الأنظمة والواجهات المختلفة لسطح المكتب وبالتحديد في إعداد بدأ تشغيل التطبيق مع النظام وهنا بعض الأوامر المفيدة لمستخدمي لينكس :
-
-- إستخدام **`--hidden`**
-
-  - يمكن تمريره عند كتابة أمر التشغيل ليبدأ التطبيق بدون واجهة رسومية أو شاشة تحميل في الخلفية
-  - يمكن تفعيله بشكل دائم عن طريق إعدادات التطبيق
-  - يدعم كل أنواع الحزم الخاصة بالتقوى
-
-- **إذا تم تثبيت التطبيق من حزمة `DEB` أو `RPM` أو `SNAP`**
-  - يمكن بدأ التطبيق عن طريق أمر `altaqwaa`
-- **اذا تم تثبيت التطبيق من حزمة `FLATPAK`**
-
-  - يمكن بدأ التطبيق عن طريق أمر `flatpak run org.altaqwaa.Altaqwaa`
-
-- **باقي الحزم يتم تشغيلها حسب المسار بدون أي مشاكل**
-
-<br>
-
----
-
-# أسئلة شائعة
-
-- هل هنالك نسخة من تطبيق التقوى لأنظمة الأندرويد؟ نعم جار العمل على نسخة من تطبيق التقوى للأندرويد [هنا](https://github.com/Alsarmad/altaqwaa_android)
-
-- هل هنالك نسخة من تطبيق التقوى لأنظمة ماك؟ للأسف حاليا لايوجد نسخة للماك والسبب عدم توفر جهاز ماك لإنشاء الحزمة... ولكن يمكن بناء التطبيق من المصدر على أي نظام تشغيل طالما تتوفر التبعيات.
-
-- ماهية المصادر المستخدمة في تطبيق التقوى؟ **تم بناء تطبيق التقوى بشفافية كاملة وكل المصادر المستخدمة مذكورة في قسم خاص تحت عنوان المصادر [هنا](#المصادر)**
-
-<br>
-
----
-
-# المساهمة في المشروع
-
-**طرق المساهمة في مشروع التقوى متنوعة وكثيرة ولعل أهمها ما يلي:**
-
-1. المساهمة في التطوير لمن لديه الخبرة الكافية
-
-   - تم تطوير مشروع التقوى بإستخدام تقنيات الويب بإستخدام إطار عمل **`ElectronJS`**
-   - مشروع التقوى لايستخدم أي أطر عمل أو مكاتب خارجية للواجهات **`HTML/CSS/JS`**
-
-2. التبليغ عن المشكلات عن طريق مستودع جيت هب من [هنا](https://github.com/rn0x/Altaqwaa-Islamic-Desktop-Application/issues)
-
-   - يرجى أن يتم وضع عنوان واضح ومناسب للمشكلة
-   - أن يتضمن مواصفات الجهاز ونظام التشغيل (والتوزيعة والواجهة المستخدمة لمستخدمي لينكس)
-   - وصف ومعلومات عن المشكلة بشكل تفصيلي إن أمكن
-
-3. دعم المشروع ماديا عن طريق **`Github Sponsors`** من [هنا](https://github.com/sponsors/rn0x)
-
-4. إقتراح ميزات جديدة وتحسينات للتطبيق
-
-   1. التواصل مع أحد المساهمين الأساسيين وطرح الفكرة والتحسين عليه
-   2. فتح مشكلة جديدة في مستودع جيت هب بالإقتراح والفكرة المراد إضافتها
-
-5. نشر تطبيق التقوى
-   - عن أبي مسعود البدري رضي الله عنه عن النبي صلى الله عليه وسلم قال: «من دلَّ على خير، فله مثلُ أجرِ فاعلِه».
-
-<br>
-
----
-
-# قم بتشغيل التطبيق في وضع التطوير
-
-<br>
-
-**متطلبات التشغيل الأساسية**
-
-- **nodejs**
-
-- **git**
-
-- **yarn** or **npm**
-
----
-
-### بأستخدام `YARN`
-
-<br>
-
-```bash
-git clone https://github.com/rn0x/Altaqwaa-Islamic-Desktop-Application
-
-cd Altaqwaa-Islamic-Desktop-Application
-
-yarn install
-
-yarn run dev
-```
-
-### بأستخدام `NPM`
-
-<br>
-
-```bash
-git clone https://github.com/rn0x/Altaqwaa-Islamic-Desktop-Application
-
-cd Altaqwaa-Islamic-Desktop-Application
-
+git lfs install                          # تفعيل Git LFS (مرة واحدة على جهازك)
+git clone https://github.com/rn0x/altaqwaa-desktop.git
+cd altaqwaa-desktop
 npm install
-
-npm run dev
+npm start
 ```
 
-<br>
+> تثبيت Git LFS حسب توزيعتك:
+> - **Fedora / RHEL**: `sudo dnf install git-lfs`
+> - **Ubuntu / Debian**: `sudo apt install git-lfs`
+> - **Arch**: `sudo pacman -S git-lfs`
+> - **Windows / macOS**: حمّله من [git-lfs.com](https://git-lfs.com) أو عبر مدير الحزم (Homebrew / winget / Chocolatey)
+>
+> استنسخ المستودع وسيُحمَّل Git LFS الملفات تلقائياً. وللتحقق: `git lfs ls-files` يعرض الملفات المتعقبة.
 
 ---
 
-# **بناء التطبيق من المصدر**
+## التطوير
 
-<br>
-
-**سيتم بناء التطبيق بحسب الأعدادات الموجودة في ملف `package.json`**
-
-### بأستخدام `YARN`
-
-<br>
+المتطلبات: **Node.js 20+** و **npm** و **Git LFS** (لتحميل ملفات البيانات الكبيرة — راجع قسم «من الكود المصدري»).
 
 ```bash
-#Windows
+npm install                # تثبيت الاعتماديات
 
-yarn run packwin
-
-#Linux
-
-yarn run packlinux
+npm run dev                # بيئة التطوير (الأفضل): Vite + Electron
+                           #  · تعديلات الواجهة تنعكس فوراً (Hot Reload)
+                           #  · أي تعديل في electron/** يعيد تشغيل Electron تلقائياً
+npm run dev:renderer       # خادم Vite فقط (الواجهة)
+npm run start              # تشغيل النسخة المبنية
+npm test                   # تشغيل الاختبارات (27 اختباراً)
 ```
 
-### بأستخدام `NPM`
+> المكتبة مرفقة كاملة وجاهزة (لقطة `resources/library/`): في أول تشغيل تُنسخ إلى بيانات المستخدم في الخلفية (استعادة فورية ~2 ثانية) — لا تُبنى ولا تحتاج إنترنت.
 
-<br>
+## البناء والتغليف
+
+> **كل أمر تغليف يبني الواجهة (React) تلقائياً أولاً عبر `npm run build`** ثم يبدأ التغليف — لا داعي لبنائها يدوياً قبل كل أمر.
+
+### المتطلبات
+
+| الأداة | الغرض |
+|---|---|
+| **Node.js 20+** و **npm** | البناء والتغليف |
+| **Git LFS** | تحميل ملفات البيانات الكبيرة (راجع قسم «من الكود المصدري») |
+| **`libxcrypt-compat`** *(Fedora/RHEL فقط)* | ضروري لبناء حزم `deb` و `rpm` — يوفّر `libcrypt.so.1` التي تطلبها أداة `fpm` المرفقة: `sudo dnf install libxcrypt-compat`. **بدون صلاحيات sudo**: حمّل الحزمة واستخرجها محلياً: `dnf download libxcrypt-compat` ثم `rpm2cpio <الحزمة>.x86_64.rpm \| cpio -idm` وشغّل البناء مع `LD_LIBRARY_PATH=<المجلد>/usr/lib64` |
+| **Wine** *(للبناء من لينكس فقط)* | ضروري لتضمين الأيقونة ومعلومات الإصدار في ملفات Windows: `sudo dnf install wine` — غير مطلوب إذا بنيت من Windows نفسه |
+| **`flatpak` + `flatpak-builder`** *(لحزمة Flatpak فقط)* | `sudo dnf install flatpak flatpak-builder`، ثم ثبّت بيئة التشغيل (مرة واحدة): `flatpak install flathub org.freedesktop.Platform//24.08 org.freedesktop.Sdk//24.08 org.electronjs.Electron2.BaseApp//24.08` |
+| **`snapcraft` + `snapd`** *(لحزمة Snap فقط)* | `sudo dnf install snapd && sudo systemctl enable --now snapd.socket && sudo ln -s /var/lib/snapd/snap /snap && sudo snap install snapcraft --classic` — الإعداد جاهز في `package.json` لكن البناء لا يتم افتراضياً |
+| **LXD** *(لحزمة Snap على غير أوبونتو)* | snapcraft يرفض بناء core24 مباشرة على غير أوبونتو: `sudo snap install lxd && sudo lxd init --auto && sudo usermod -aG lxd $USER` — ثم أعد تسجيل الدخول أو استخدم `sg lxd -c "…"` |
+| **إصلاح firewalld** *(Fedora)* | بدونها تتجمد الحاوية على «Timed out waiting for networking» لأن الجدار الناري يمنع DHCP على الجسر: `sudo firewall-cmd --permanent --zone=trusted --add-interface=lxdbr0 && sudo firewall-cmd --reload` |
+| **`makepkg` + Arch** *(لحزمة pacman فقط)* | تتطلب التغليف على نظام Arch Linux أو CI |
+
+### الأوامر
 
 ```bash
-#Windows
+npm install                # تثبيت الاعتماديات (يتطلب Git LFS مفعّل)
+npm run build              # بناء الواجهة فقط → dist/renderer
 
-npm run packwin
+npm run pack:linux         # جميع حزم Linux الافتراضية: AppImage + deb + rpm + flatpak + tar.gz
+npm run pack:appimage      # AppImage فقط
+npm run pack:deb           # حزمة deb (Debian/Ubuntu) فقط
+npm run pack:rpm           # حزمة rpm (Fedora/RHEL) فقط
+npm run pack:flatpak       # حزمة Flatpak فقط
+npm run pack:snap          # حزمة Snap فقط (يتطلب snapcraft — الإعداد جاهز)
+npm run pack:pacman        # حزمة Arch Linux فقط (يتطلب makepkg على Arch/CI)
+npm run pack:tar           # tar.gz فقط
 
-#Linux
+npm run pack:win           # حزم Windows: Setup.exe (NSIS) + Portable.exe
+npm run pack:win:portable  # Portable.exe فقط
+npm run pack:mac           # macOS (يجب البناء من macOS/CI)
 
-npm run packlinux
+npm run packlinux          # اختصار pack:linux (الاسم القديم)
+npm run packwin            # اختصار pack:win (الاسم القديم)
+npm run pack               # تغليف تجريبي (مجلد فقط)
+npm run dist               # تغليف كامل لمنصة الجهاز الحالي
+npm run clean              # حذف مجلد البناء بالكامل
 ```
 
-<br>
+- **المخرجات في `dist/`**: `Altaqwaa-*.AppImage` · `altaqwaa_*_amd64.deb` · `altaqwaa-*.x86_64.rpm` · `org.altaqwaa.Altaqwaa.flatpak` · `altaqwaa-*.tar.gz` · `Altaqwaa Setup *.exe` · `Altaqwaa *.exe`
+- **ملاحظة `TMPDIR` (Fedora)**: `/tmp` في Fedora ذاكرة مؤقتة (tmpfs) نصف حجم RAM — مع حجم المكتبة الكبير قد تمتلئ فتفشل الحزم برسالة `Disk quota exceeded`. الحل: `TMPDIR=/var/tmp npx electron-builder --linux …` (نقل أعمال البناء إلى القرص)
+- **كل البيانات تُضمَّن تلقائياً**: القرآن والأذكار والمكتبة الموحّدة الكاملة (36,206 مادة: 19,727 فتوى · 4,531 خطبة · 6,128 حدثًا · 5,820 سؤالًا — بأصواتها وروابطها ومرفقاتها) والصوتيات والأيقونات تُنسخ إلى `resources/` داخل الحزمة (`extraResources`) — لا حاجة لأي تحميل أو بناء بعد التثبيت
+- **بيانات موحّدة بلا تكرار**: كل المحتوى النصي (فتاوى، خطب، تاريخ، أسئلة) في مصدر واحد هو `resources/library/` — والقرآن والأذكار والراديو أنواع مستقلة في `resources/data/` لا علاقة لها بالمكتبة
+- **المكتبة كاملة ومجمّعة**: اللقطة الجاهزة (36,206 مادة) تُنسخ في أول تشغيل (استعادة فورية دون إنترنت) — لا يوجد خط أنابيب بناء أو تحديث للمحتوى
+- **macOS**: لا يمكن بناؤه من Linux — يتطلب جهاز Mac أو CI، والأيقونة جاهزة (`resources/icons/icon.icns`)
+
+### Flatpak
+
+- يُبنى عبر `npm run pack:flatpak` باستخدام بيئة **org.freedesktop.Platform/Sdk 24.08** مع القاعدة **org.electronjs.Electron2.BaseApp 24.08** (موصى به رسمياً من مشروع Electron)
+- الأذونات (`finishArgs`): الشبكة، X11 + Wayland، الصوت (PulseAudio)، تسريع الرسوميات (DRM)، الوصول لمجلد المنزل (لإضافة أصوات الأذان الخاصة)، والتنبيهات (`org.freedesktop.Notifications`)
+- بعد البناء يمكن التثبيت محلياً: `flatpak install --user --reinstall dist/org.altaqwaa.Altaqwaa.flatpak`
+
+### Snap
+
+- الإعداد جاهز في `package.json` (`build.snapcraft`): قاعدة **core24** (Ubuntu 24.04 — الأحدث)، confinement `strict`، grade `stable`، مع stagePackages الافتراضية — والأذونات (الشبكة، المنزل، الصوت، X11/Wayland…) تُضاف تلقائياً بواسطة electron-builder لتطبيقات Electron
+- البناء لا يحدث افتراضياً ضمن `pack:linux` — شغّله فقط عبر `npm run pack:snap` بعد تثبيت `snapcraft` + `LXD` (انظر جدول المتطلبات)
+- يُبنى داخل بيئة LXD المعزولة (base: core24 مع GNOME platform — gnome-46-2404 و gtk-common-themes تلقائياً)
+- للاختبار محلياً: `sudo snap install --dangerous dist/altaqwaa_4.0.0_amd64.snap`
+- للرفع إلى متجر Snap: `snapcraft login` ثم `snapcraft upload dist/altaqwaa_4.0.0_amd64.snap`
 
 ---
 
-# التبعيات
+## بنية المشروع
 
- <br>
-
-- adhan-js
-- electron
-- fs-extra
-- moment-js **`(moment-duration-format, moment-hijri, moment-timezone)`**
-- node-fetch
-- menubar
-- v8-compile-cache
-- nodemon **`للمطورين فقط`**
-
-<br>
-
----
-
-# المصادر
-
-<br>
-
-| مصدر                       | الرابط                                    |
-| :------------------------- | ----------------------------------------- |
-| القرآن الكريم              | https://github.com/rn0x/Quran-Json        |
-| ملفات صوت القرآن الكريم    | https://www.mp3quran.net/api/_arabic.json |
-| الأذكار                    | https://www.islambook.com/azkar           |
-| الحصول على إحداثيات الموقع | http://ip-api.com/json                    |
-| الأيقونات                  | https://www.flaticon.com                  |
-| خطوط                       | https://fonts.qurancomplex.gov.sa/wp02    |
-| خطوط                       | https://github.com/rastikerdar/vazirmatn  |
-| مؤثرات الإنتقال            | https://animate.style                     |
-
-<br>
-
----
-
-# المساهمون
-
-<br>
-
-<table>
-    <tr>
-        <td align="center"><a href="https://github.com/rn0x"><img src="https://avatars.githubusercontent.com/u/76129163?v=4" width="100px;"/><br /><sub>rn0x</sub></a></td>
-        <td align="center"><a href="https://github.com/kemzops"><img src="https://avatars.githubusercontent.com/u/52936496?v=4" width="100px;"/><br /><sub>kemzops</sub></a></td>
-        <td align="center"><a href="https://github.com/o-kotb"><img src="https://avatars.githubusercontent.com/u/72304125?v=4" width="100px;"/><br /><sub>o-kotb</sub></a></td>
-        <td align="center"><a href="https://github.com/m-1226"><img src="https://avatars.githubusercontent.com/u/64734981?v=4" width="100px;"/><br /><sub>m-1226</sub></a></td>
-    </tr>
-</table>
-
-<br>
+```
+├── electron/            ← الخلفية (العملية الرئيسية، ESM .mjs)
+│   ├── main.mjs           الدخول: الإقلاع، العلبة، دورة الحياة، فحص التحديثات
+│   ├── preload.cjs        جسر معزول → window.altaqwaa (CJS مطلوب للعزل)
+│   ├── core/              منطق نقي بدون واجهات النوافذ
+│   │   ├── paths.mjs      المسارات (تطوير vs حزمة)
+│   │   ├── logger.mjs     السجلات
+│   │   ├── net.mjs        جلب JSON آمن (مهلة + حد حجم)
+│   │   ├── versions.mjs   مقارنة الإصدارات وتحليل إصدارات GitHub (نقي وقابل للاختبار)
+│   │   ├── library/       مخزن المكتبة + البحث العربي (المحتوى ثابت ومرفق)
+│   │   └── search/        محرك البحث العربي (BM25 + تصحيح إملائي)
+│   ├── services/          منطق الأعمال لكل مجال
+│   │   ├── settings.service.mjs   إعدادات محققة بكتابة ذرّية
+│   │   ├── library.service.mjs    محرك المحتوى + استعادة اللقطة المرفقة
+│   │   ├── updates.service.mjs    فحص التحديثات من GitHub Releases
+│   │   ├── data.service.mjs       القرآن / الأذكار / حصن المسلم / الراديو
+│   │   ├── prayer.service.mjs     مواقيت الصلاة (adhan.js) + العد التنازلي
+│   │   ├── calendar.service.mjs   التاريخ الهجري والميلادي
+│   │   ├── network.service.mjs    فحوصات الاتصال (لا ينهار دون إنترنت)
+│   │   ├── audio.service.mjs      تشغيل هجين: بث ⇄ تحميل محلي
+│   │   ├── athan.service.mjs      أصوات الأذان المرفقة والمضافة
+│   │   └── notifications.service.mjs  تنبيهات الأذان والأذكار
+│   ├── ipc/               معالجات رفيعة لكل مجال (تحقق + تحديد معدل)
+│   └── window/            النافذة الرئيسية + بروتوكول altaqwaa://
+├── renderer/             ← الواجهة (React 19 + Vite)
+│   ├── src/
+│   │   ├── App.jsx        التوجيه، الثيم، التنبيهات، التخطيط
+│   │   ├── pages/         16 صفحة (الرئيسية، البحث، المصحف، القراء…)
+│   │   ├── components/    AudioPlayer, QuizPlayer, UpdateModal, Sidebar…
+│   │   ├── lib/           الجسر (IPC)، الخطافات، الموجه، التنسيق
+│   │   └── styles/        نظام التصميم (RTL، ليلي/نهاري)
+│   └── assets/            الشعار
+├── resources/            ← الأصول المرفقة للقراءة فقط
+│   ├── data/              القرآن، الأذكار، حصن المسلم، التفسير، الراديو (عبر Git LFS)
+│   ├── audio/             أصوات الأذان والأذكار (عبر Git LFS)
+│   ├── fonts/             الخطوط العربية
+│   ├── icons/             أيقونات التطبيق (png/ico/icns)
+│   └── library/           المكتبة الموحّدة الكاملة (~344MB، عبر Git LFS)
+├── screenshots/          لقطات شاشة التوثيق
+├── test/                 اختبارات ESM (node --test)
+└── scripts/              dev.mjs (بيئة التطوير)
+```
 
 ---
 
-<br>
+## التحديثات
 
-### مراجعة تطبيق التقوى في قناة [Mohammed Besar](https://www.youtube.com/@mmbesar) `v3.0.1`
+يتحقق التطبيق تلقائياً من وجود نسخة أحدث من **المستودع الرسمي على GitHub** عند التشغيل (مرة كل 6 ساعات على الأكثر)، وعند توفر إصدار جديد تظهر نافذة تتيح لك:
 
-[![mmbesar|690x385](/screenshots/mmbesar.png)](https://www.youtube.com/watch?v=PQQks44j7YQ)
+- **تحميل الإصدار الجديد** — يفتح صفحة الإصدارات الرسمية
+- **لاحقاً** — إغلاق النافذة
+- **لا تظهر مجدداً** — كتم التنبيه لهذا الإصدار
 
-<br>
+يمكنك أيضاً التحقق يدوياً من صفحة الإعدادات، أو إيقاف التنبيه التلقائي بالكامل من **الإعدادات ← التحديثات**.
 
-### مراجعة تطبيق التقوى في قناة [NofarahTech](https://www.youtube.com/@NofarahTech) `v2.1.0`
+---
 
-[![Nofarah Tech|690x385](/screenshots/NofarahTech.png)](https://www.youtube.com/watch?v=QbL8l6_-WR4)
+## الأمان والخصوصية
 
-<br>
+- `contextIsolation: true` و `sandbox: true` و `nodeIntegration: false`
+- الواجهة لا تتواصل إلا عبر الجسر الضيق `window.altaqwaa`
+- إجبار HTTPS (يُرقّى `http:` تلقائياً)، حدود لحجم الاستجابات والتحميلات، وكتابة ذرّية للملفات
+- **لا تُرسل بياناتك إلى أي جهة**: المكتبة، التسبيحات، الإحداثيات، والإعدادات كلها مخزنة محلياً
 
-### مراجعة تطبيق التقوى في قناة [Gnu Tux](https://www.youtube.com/@GnuTux) `v2.0.0`
+---
 
-[![Gnu Tux|690x385](/screenshots/GnuTux.png)](https://www.youtube.com/watch?v=PtRfxMe9nRI)
+## الترخيص
 
-# سبحانك اللهم وبحمدك أشهد أن لا إله إلا أنت أستغفرك وأتوب إليك
+هذا المشروع مرخّص بموجب **[GNU General Public License v3.0](LICENSE)** — مجاني ومفتوح المصدر إلى الأبد.
+
+- المستودع: [github.com/rn0x/altaqwaa-desktop](https://github.com/rn0x/altaqwaa-desktop)
+- الإصدارات: [Releases](https://github.com/rn0x/altaqwaa-desktop/releases)
+
+
+ هذا التطبيق صدقة جارية لكل من ساهم فيه أو نشره — ولا تحرمونا من دعائكم.
