@@ -130,6 +130,10 @@
         "stagePackages": [
           "default"
         ],
+        "plugs": [
+          "default",
+          "browser-support"
+        ],
         "useLXD": true
       }
     },
