@@ -9,7 +9,7 @@
   const STATS_URL = "assets/stats.json";
   const API_RELEASES = "https://api.github.com/repos/" + REPO + "/releases?per_page=100";
   const API_REPO = "https://api.github.com/repos/" + REPO;
-  const CACHE_KEY = "altaqwaa-live-v1";
+  const CACHE_KEY = "altaqwaa-live-v2";
   const CACHE_TTL = 6 * 60 * 60 * 1000; // 6 ساعات
 
   /* ---------- أدوات مساعدة ---------- */
@@ -217,7 +217,12 @@
 
       let total = 0;
       const latest = rels[0] || {};
-      const flatAssets = latest.assets || [];
+      const flatAssets = (latest.assets || []).map((a) => ({
+        name: a.name,
+        size: a.size,
+        download_count: a.download_count,
+        url: a.browser_download_url || a.url,
+      }));
       const allAssets = [];
       for (const r of rels) {
         for (const a of r.assets || []) {
