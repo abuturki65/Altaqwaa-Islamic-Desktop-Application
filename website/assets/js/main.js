@@ -149,7 +149,7 @@
       const assets = latest && Array.isArray(latest.assets) ? latest.assets : [];
       for (const a of assets) {
         const n = a.name.toLowerCase();
-        if (/\.exe|\.msi|portable|setup/i.test(n)) out.windows.push(a);
+        if (/\.zip/i.test(n)) out.windows.push(a);
         else if (/appimage|\.deb|\.rpm|\.snap|flatpak|tar\.gz/i.test(n)) out.linux.push(a);
       }
     }
@@ -289,7 +289,7 @@
     const find = (re) => assets.find((a) => re.test(a.name.toLowerCase()));
 
     if (os === "windows") {
-      const target = find(/setup/) || find(/portable/);
+      const target = find(/setup.*\.zip/) || find(/portable.*\.zip/) || find(/\.zip/) || find(/setup/) || find(/portable/);
       if (target) {
         btn.href = target.url;
         label.textContent = "حمّل لنظام Windows";
