@@ -172,7 +172,7 @@
       countUp(el, target || 0, 1600);
     });
 
-    $("#hero-version").textContent = (tag || "4.0.0").replace(/^v/, "");
+    $("#hero-version").textContent = (tag || "4.0.1").replace(/^v/, "");
     $("#win-version").textContent = tag;
     $("#linux-version").textContent = tag;
 

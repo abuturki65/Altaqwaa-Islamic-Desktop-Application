@@ -44,6 +44,37 @@ function Slider({ value, min, max, step = 1, onChange, suffix }) {
     );
 }
 
+/* Font-family picker: a thin wrapper around a <select> wired to the settings store. */
+const FONT_FAMILIES = [
+    { value: 'Vazirmatn', label: 'وزيرة (Vazirmatn)' },
+    { value: 'Cairo',     label: 'القاهرة (Cairo)' },
+    { value: 'Tajawal',   label: 'تجوال (Tajawal)' },
+    { value: 'Amiri',     label: 'أميري (Amiri)' },
+    { value: 'Noto Naskh Arabic', label: 'نوتو نسك عربي' },
+];
+const CONTENT_FONTS = [
+    { value: 'Quran Uthmani', label: 'المصحف (Quran Uthmani)' },
+    { value: 'Amiri',         label: 'أميري (Amiri)' },
+    { value: 'Noto Naskh Arabic', label: 'نوتو نسك عربي' },
+];
+
+function FontSelector({ options, value, onChange, label, desc }) {
+    return (
+        <Row icon={<BookOpen size={16} />} name={label} desc={desc}>
+            <select
+                className="select"
+                style={{ minWidth: 180 }}
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
+            >
+                {options.map((o) => (
+                    <option key={o.value} value={o.value}>{o.label}</option>
+                ))}
+            </select>
+        </Row>
+    );
+}
+
 /* Accessible confirmation dialog: Escape / backdrop close, autofocus on the
  * safe action, busy state while the destructive operation runs. */
 function ConfirmModal({ open, title, message, details, confirmLabel, busy, onConfirm, onCancel }) {
@@ -203,6 +234,20 @@ export default function SettingsPage() {
                 <Row icon={<BookOpen size={16} />} name="حجم خط الأذكار" desc="ضبط حجم النصوص في صفحة الأذكار">
                     <Slider value={settings.font_size_adhkar} min={14} max={32} onChange={(v) => save('font_size_adhkar', v)} />
                 </Row>
+                <FontSelector
+                    options={FONT_FAMILIES}
+                    value={settings.font_family_ui || 'Vazirmatn'}
+                    onChange={(v) => t('font_family_ui', v)}
+                    label="خط الواجهة"
+                    desc="الخط المستخدم في النصوص العامة: القوائم، الأزرار، العناوين"
+                />
+                <FontSelector
+                    options={CONTENT_FONTS}
+                    value={settings.font_family_content || 'Quran Uthmani'}
+                    onChange={(v) => t('font_family_content', v)}
+                    label="خط المحتوى (القرآن والأذكار)"
+                    desc="الخط المستخدم في الآيات والأذكار"
+                />
             </Section>
 
             <Section title="الصوت">

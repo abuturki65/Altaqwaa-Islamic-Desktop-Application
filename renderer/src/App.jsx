@@ -27,10 +27,22 @@ import TasbihPage from './pages/TasbihPage';
 import SettingsPage from './pages/SettingsPage';
 import AboutPage from './pages/AboutPage';
 
+function applyFontSettings(settings) {
+    const ui = (settings && typeof settings.font_family_ui === 'string' && settings.font_family_ui)
+        ? settings.font_family_ui
+        : 'Vazirmatn';
+    const content = (settings && typeof settings.font_family_content === 'string' && settings.font_family_content)
+        ? settings.font_family_content
+        : 'Quran Uthmani';
+    document.documentElement.style.setProperty('--font-ui', `"${ui}", system-ui, sans-serif`);
+    document.documentElement.style.setProperty('--font-quran', `"${content}", serif`);
+}
+
 function applyTheme(settings) {
     const dark = settings ? Boolean(settings.dark_mode) : true;
     document.documentElement.dataset.theme = dark ? 'dark' : 'light';
     bridge.win.theme(dark).catch(() => {});
+    applyFontSettings(settings);
 }
 
 export default function App() {
