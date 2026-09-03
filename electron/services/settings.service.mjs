@@ -33,9 +33,6 @@ const DEFAULTS = {
     update_notifications: true,
     update_dismissed_version: '',
     last_update_check: '',
-    /* font pickers */
-    font_family_ui: 'Vazirmatn',
-    font_family_content: 'Quran Uthmani',
     /* audio downloads */
     audio_mode: 'online', // 'online' | 'local'
     /* prayer coordinates — user-entered, stored locally (no external services) */

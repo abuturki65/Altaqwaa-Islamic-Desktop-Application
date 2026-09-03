@@ -20,7 +20,7 @@
 <p align="center">
   <a href="https://flathub.org/en/apps/org.altaqwaa.Altaqwaa"><img src="https://flathub.org/assets/badges/flathub-badge-en.png" alt="Download on Flathub" height="64" /></a>
   <a href="https://snapcraft.io/altaqwaa"><img src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" alt="Get it from the Snap Store" height="64" /></a>
-  <a href="https://github.com/rn0x/altaqwaa-desktop/releases/latest"><img src="https://img.shields.io/badge/تحميل_من_Releases-4.0.1-181717?logo=github" alt="التحميل من GitHub Releases" height="64" /></a>
+  <a href="https://github.com/rn0x/altaqwaa-desktop/releases/latest"><img src="https://img.shields.io/badge/تحميل_من_Releases-4.0.0-181717?logo=github" alt="التحميل من GitHub Releases" height="64" /></a>
 </p>
 
 تطبيق إسلامي متكامل يضع المصحف والمكتبة بين يديك دون إنترنت: النص القرآني بالخط العثماني (مجمع الملك فهد)، التفسير الميسر، الأذكار، حصن المسلم، مواقيت الصلاة، المسبحة، وأكثر من 35,000 مادة إسلامية — كلها محلياً على جهازك، بلا حسابات ولا تتبع ولا خوادم.
@@ -49,8 +49,8 @@
 
 | النسخة | الرابط المباشر |
 |---|---|
-| **المثبّت** (NSIS — يدعم تغيير مسار التثبيت) | [Altaqwaa-Setup-4.0.1.zip](https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.1/Altaqwaa-Setup-4.0.1.zip) |
-| **المحمولة** (بدون تثبيت) | [Altaqwaa-4.0.1-portable.zip](https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.1/Altaqwaa-4.0.1-portable.zip) |
+| **المثبّت** (NSIS — يدعم تغيير مسار التثبيت) | [Altaqwaa-Setup-4.0.0.zip](https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.0/Altaqwaa-Setup-4.0.0.zip) |
+| **المحمولة** (بدون تثبيت) | [Altaqwaa-4.0.0-portable.zip](https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.0/Altaqwaa-4.0.0-portable.zip) |
 
 ### 🐧 Linux
 
@@ -58,10 +58,10 @@
 |---|---|
 | **Snap Store** | `sudo snap install altaqwaa` — [snapcraft.io/altaqwaa](https://snapcraft.io/altaqwaa) |
 | **Flathub** | `flatpak install flathub org.altaqwaa.Altaqwaa` — [flathub.org](https://flathub.org/en/apps/org.altaqwaa.Altaqwaa) |
-| **AppImage** | [Altaqwaa-4.0.1.AppImage](https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.1/Altaqwaa-4.0.1.AppImage) — ثم `chmod +x` |
-| **deb** (Debian/Ubuntu) | [altaqwaa_4.0.1_amd64.deb](https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.1/altaqwaa_4.0.1_amd64.deb) |
-| **rpm** (Fedora/RHEL) | [altaqwaa-4.0.1.x86_64.rpm](https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.1/altaqwaa-4.0.1.x86_64.rpm) |
-| **أرشيف tar.gz** | [altaqwaa-4.0.1.tar.gz](https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.1/altaqwaa-4.0.1.tar.gz) |
+| **AppImage** | [Altaqwaa-4.0.0.AppImage](https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.0/Altaqwaa-4.0.0.AppImage) — ثم `chmod +x` |
+| **deb** (Debian/Ubuntu) | [altaqwaa_4.0.0_amd64.deb](https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.0/altaqwaa_4.0.0_amd64.deb) |
+| **rpm** (Fedora/RHEL) | [altaqwaa-4.0.0.x86_64.rpm](https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.0/altaqwaa-4.0.0.x86_64.rpm) |
+| **أرشيف tar.gz** | [altaqwaa-4.0.0.tar.gz](https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.0/altaqwaa-4.0.0.tar.gz) |
 
 > جميع الإصدارات السابقة: [GitHub Releases](https://github.com/rn0x/altaqwaa-desktop/releases) · الملفات غير موقّعة رقمياً — قد تظهر تحذيرات SmartScreen على Windows.
 
