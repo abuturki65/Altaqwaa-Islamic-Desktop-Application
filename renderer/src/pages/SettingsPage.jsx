@@ -188,7 +188,12 @@ export default function SettingsPage() {
             bridge.athan.list().then(setSounds).catch(() => setSounds([]));
             const mb = ((Number(res?.freedBytes) || 0) / 1024 / 1024).toFixed(1);
             const soundsCount = Number(res?.customSounds) || 0;
-            toast(`تمت إعادة تعيين التطبيق — تم تحرير ${mb} ميغابايت${soundsCount ? ` وحذف ${soundsCount} صوت أذان` : ''}`);
+            const filesCount = Number(res?.deletedFiles) || 0;
+            const parts = [];
+            if (Number(mb) > 0) parts.push(`${mb} ميغابايت من الصوتيات`);
+            if (soundsCount) parts.push(`${soundsCount} صوت أذان`);
+            if (filesCount) parts.push(`${filesCount} ملف محمل`);
+            toast(parts.length ? `تمت إعادة تعيين التطبيق — حُذف ${parts.join(' و')}` : 'تمت إعادة تعيين التطبيق');
         } catch (_) {
             toast('تعذر إعادة تعيين التطبيق', 'err');
         } finally {
@@ -218,6 +223,7 @@ export default function SettingsPage() {
     };
 
     return (
+        <>
         <div className="page">
             <div className="page-header">
                 <h1 className="page-title"><Settings2 size={24} color="var(--accent)" /> الإعدادات</h1>
@@ -383,22 +389,25 @@ export default function SettingsPage() {
             <div className="row" style={{ justifyContent: 'center', gap: 8, color: 'var(--muted)', fontSize: 12, fontWeight: 700 }}>
                 <Info size={13} /> التقوى · الإصدار {appVersion || '…'}
             </div>
-
-            <ConfirmModal
-                open={confirmOpen}
-                title="إعادة تعيين التطبيق؟"
-                message="سيتم حذف كل بياناتك الشخصية وإعادة ضبط الإعدادات على الوضع الافتراضي. لا يمكن التراجع عن هذا الإجراء. محتوى المكتبة نفسه يبقى كما هو."
-                details={[
-                    'سجل البحث والعلامات المرجعية',
-                    'الملفات الصوتية المحمّلة (صفحة القراء)',
-                    'أصوات الأذان المضافة يدوياً',
-                    'الإعدادات: المنطقة الزمنية، طريقة الحساب، حجم الخط، بيانات السبحة وغيرها',
-                ]}
-                confirmLabel="تنظيف وإعادة تعيين"
-                busy={resetting}
-                onConfirm={doReset}
-                onCancel={() => { if (!resetting) setConfirmOpen(false); }}
-            />
         </div>
+
+        <ConfirmModal
+            open={confirmOpen}
+            title="إعادة تعيين التطبيق؟"
+            message="سيتم حذف كل بياناتك الشخصية وإعادة ضبط الإعدادات على الوضع الافتراضي. لا يمكن التراجع عن هذا الإجراء. محتوى المكتبة نفسه يبقى كما هو."
+            details={[
+                'سجل البحث والعلامات المرجعية',
+                'الملفات الصوتية المحمّلة (القراء + بطاقات القرآن)',
+                'ملفات المستندات المحملة (بطاقات القرآن PDF)',
+                'أصوات الأذان المضافة يدوياً',
+                'نتائج الاختبارات الإسلامية',
+                'الإعدادات: المنطقة الزمنية، طريقة الحساب، حجم الخط، بيانات السبحة وغيرها',
+            ]}
+            confirmLabel="تنظيف وإعادة تعيين"
+            busy={resetting}
+            onConfirm={doReset}
+            onCancel={() => { if (!resetting) setConfirmOpen(false); }}
+        />
+    </>
     );
 }

@@ -83,6 +83,9 @@ export const updates = {
 };
 
 export const openExternal = (url) => api().openExternal(url);
+export const downloadFile = (opts) => api().downloadFile(opts);
+export const openFile = (filePath) => api().openFile(filePath);
+export const saveFileDialog = (opts) => api().saveFileDialog(opts);
 
 /* Safe remote URL: upgrade known-insecure http hosts, fallback handled by <audio> */
 export const safeMedia = (url) => String(url || '').replace(/^http:\/\//i, 'https://');

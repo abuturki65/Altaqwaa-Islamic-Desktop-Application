@@ -1099,6 +1099,305 @@ mark { background: var(--gold-soft); color: var(--gold); border-radius: 4px; pad
 
 .ayah-font { font-family: var(--font-quran); }
 
+/* ---------------- quran cards page ---------------- */
+
+.quran-card-item {
+    padding: 18px 20px;
+    text-align: start;
+    cursor: pointer;
+    animation: cardFadeIn var(--t-slow) both;
+}
+.quran-card-item:hover .quran-card-item-name {
+    color: var(--accent);
+}
+.quran-card-item-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.quran-card-item-rev {
+    font-size: var(--font-xs);
+    font-weight: 700;
+    color: var(--muted);
+}
+.quran-card-item-name {
+    font-size: var(--font-xl);
+    font-weight: 800;
+    line-height: 1.6;
+    margin-bottom: 2px;
+    transition: color var(--t-fast);
+}
+.quran-card-item-en {
+    font-size: var(--font-sm);
+    color: var(--text-2);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.quran-card-item-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--font-xs);
+    color: var(--muted);
+    font-weight: 700;
+}
+.quran-card-item-icons {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent);
+    opacity: .7;
+}
+
+.quran-card-hero {
+    position: relative;
+    overflow: hidden;
+}
+.quran-card-hero::before {
+    content: "";
+    position: absolute;
+    inset-inline-end: -20px;
+    top: -20px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: var(--gold-soft);
+    opacity: .4;
+    pointer-events: none;
+}
+.quran-card-hero::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: 30%;
+    bottom: -30px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    opacity: .3;
+    pointer-events: none;
+}
+.quran-card-hero-inner {
+    position: relative;
+    z-index: 1;
+    padding: 28px 28px;
+    background: linear-gradient(135deg, var(--surface), var(--gold-soft));
+}
+.quran-card-number {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--r-lg);
+    display: grid;
+    place-items: center;
+    background: var(--gold-soft);
+    color: var(--gold);
+    font-size: 28px;
+    font-weight: 900;
+    flex-shrink: 0;
+    transition: transform var(--t-med);
+}
+.quran-card-hero:hover .quran-card-number {
+    transform: scale(1.08) rotate(-3deg);
+}
+
+.quran-card-field {
+    padding: 18px 20px;
+    animation: cardFadeIn var(--t-slow) both;
+    transition: transform var(--t-med), box-shadow var(--t-med);
+}
+.quran-card-field:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-2);
+}
+.quran-card-field-title {
+    font-size: var(--font-sm);
+    font-weight: 800;
+    color: var(--gold);
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+}
+.quran-card-field-content {
+    font-size: var(--font-md);
+    line-height: 2.2;
+    color: var(--text-2);
+    user-select: text;
+}
+
+/* --- media cards --- */
+
+.quran-media-card {
+    padding: 22px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    transition: transform var(--t-med), box-shadow var(--t-med);
+}
+.quran-media-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-3);
+}
+.quran-media-card-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+}
+.quran-media-card-title {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+.quran-media-card-sub {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted);
+    line-height: 1.5;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.quran-media-card-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* audio card — accent / teal */
+.quran-media-audio .quran-media-card-icon {
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+.quran-media-audio .quran-media-card-title {
+    color: var(--accent);
+}
+.quran-media-audio {
+    border-color: var(--accent-border);
+    background: linear-gradient(180deg, var(--accent-soft), var(--surface) 60%);
+}
+
+/* pdf card — blue */
+.quran-media-pdf .quran-media-card-icon {
+    background: rgba(37, 99, 235, .12);
+    color: #3b82f6;
+}
+.quran-media-pdf .quran-media-card-title {
+    color: #3b82f6;
+}
+.quran-media-pdf {
+    border-color: rgba(37, 99, 235, .25);
+    background: linear-gradient(180deg, rgba(37, 99, 235, .06), var(--surface) 60%);
+}
+
+/* youtube card — red */
+.quran-media-youtube .quran-media-card-icon {
+    background: rgba(220, 38, 38, .12);
+    color: #dc2626;
+}
+.quran-media-youtube .quran-media-card-title {
+    color: #dc2626;
+}
+.quran-media-youtube {
+    border-color: rgba(220, 38, 38, .25);
+    background: linear-gradient(180deg, rgba(220, 38, 38, .06), var(--surface) 60%);
+}
+
+/* media buttons */
+.quran-media-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border-radius: var(--r-sm);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--t-fast);
+    border: none;
+    font-family: inherit;
+}
+.quran-media-btn:disabled {
+    opacity: .45;
+    pointer-events: none;
+}
+.quran-media-btn-play {
+    background: var(--accent);
+    color: #fff;
+}
+.quran-media-btn-play:hover {
+    background: var(--accent-2);
+    filter: brightness(1.08);
+}
+.quran-media-btn-download {
+    background: var(--surface-2);
+    color: var(--text-2);
+}
+.quran-media-btn-download:hover {
+    background: var(--surface-3);
+    color: var(--text);
+}
+.quran-media-btn-yt {
+    background: #dc2626;
+    color: #fff;
+    width: 100%;
+}
+.quran-media-btn-yt:hover {
+    background: #ef4444;
+    filter: brightness(1.1);
+    box-shadow: 0 4px 14px rgba(220, 38, 38, .35);
+}
+
+/* source card */
+.quran-source-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: all var(--t-fast);
+    width: 100%;
+    text-align: start;
+    border: 1px dashed var(--border-strong);
+    background: var(--surface);
+}
+.quran-source-card:hover {
+    border-color: var(--accent);
+    border-style: solid;
+    background: var(--accent-soft);
+}
+.quran-source-card:hover .quran-source-icon {
+    background: var(--accent);
+    color: #fff;
+}
+.quran-source-inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.quran-source-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: var(--surface-2);
+    color: var(--text-2);
+    transition: all var(--t-fast);
+}
+
+@keyframes cardFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+}
+
 @media (max-width: 860px) {
     .content { padding: 18px 16px 50px; }
     .sidebar { width: 78px; padding-inline: 8px; }

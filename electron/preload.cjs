@@ -125,4 +125,7 @@ contextBridge.exposeInMainWorld('altaqwaa', {
     appPath: () => ipcRenderer.invoke('App_Path'),
     copyText: (text) => ipcRenderer.invoke('clipboard:write', text),
     openExternal: (url) => ipcRenderer.invoke('openExternal', url),
+    downloadFile: (opts) => ipcRenderer.invoke('download:file', opts),
+    openFile: (filePath) => ipcRenderer.invoke('openFile', filePath),
+    saveFileDialog: (opts) => ipcRenderer.invoke('saveFile:dialog', opts),
 });

@@ -8,7 +8,11 @@ import * as prayer from '../services/prayer.service.mjs';
 import * as network from '../services/network.service.mjs';
 import * as audio from '../services/audio.service.mjs';
 import * as athan from '../services/athan.service.mjs';
+import * as tracker from '../core/downloads-tracker.mjs';
 import logger from '../core/logger.mjs';
+import fs from 'node:fs';
+import path from 'node:path';
+import { USER_DATA_DIR } from '../core/paths.mjs';
 
 /* Keys that affect the notification scheduler — changing one of these
  * re-arms the adhan/adhkar timers without touching anything else. */
@@ -40,17 +44,51 @@ export function registerAppIpc({ settings, library, getWin, notifications }) {
     });
 
     /* Factory reset: wipe user data (search history, bookmarks, downloads,
-     * custom adhan sounds) and restore settings to their bundled defaults. */
+     * custom adhan sounds, tracked files, quiz scores) and restore settings
+     * to their bundled defaults. */
     handle('settings:reset', () => {
         let freedBytes = 0;
         let customSounds = 0;
+        let deletedFiles = 0;
+
+        /* 1. Reciter audio (entire audio/ directory) */
         try { freedBytes = audio.removeAllLocal(); } catch (e) { logger.warn('reset: audio cleanup failed', { error: e.message }); }
+
+        /* 2. Custom adhan sounds */
         try { customSounds = athan.removeAllCustom(); } catch (e) { logger.warn('reset: adhan cleanup failed', { error: e.message }); }
+
+        /* 3. Tracked downloads (Quran Cards audio/PDF, etc.) */
+        try {
+            const files = tracker.list();
+            for (const fp of files) {
+                try {
+                    if (fs.existsSync(fp)) {
+                        fs.unlinkSync(fp);
+                        deletedFiles++;
+                    }
+                } catch (_) { /* skip individual failures */ }
+            }
+            tracker.clear();
+        } catch (e) { logger.warn('reset: tracked downloads cleanup failed', { error: e.message }); }
+
+        /* 4. Quiz scores */
+        try {
+            const quizFile = path.join(USER_DATA_DIR, 'quiz_scores.json');
+            if (fs.existsSync(quizFile)) {
+                fs.unlinkSync(quizFile);
+                deletedFiles++;
+            }
+        } catch (e) { logger.warn('reset: quiz scores cleanup failed', { error: e.message }); }
+
+        /* 5. Search history + bookmarks */
         try { library.clearUserData(); } catch (e) { logger.warn('reset: user data cleanup failed', { error: e.message }); }
+
+        /* 6. Restore default settings */
         const out = settings.reset();
         if (notifications) notifications.reload();
-        logger.info('Factory reset completed', { freedBytes, customSounds });
-        return { settings: out, freedBytes, customSounds };
+
+        logger.info('Factory reset completed', { freedBytes, customSounds, deletedFiles });
+        return { settings: out, freedBytes, customSounds, deletedFiles };
     });
 
     /* --- static data (allowlist, bundled locally) --- */

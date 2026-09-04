@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {
     Search, ScrollText, BookOpen, Landmark, BrainCircuit,
-    BookOpenCheck, Hand, ShieldCheck, Clock, Sparkles, BookOpenText, Radio, Mic2,
+    BookOpenCheck, Hand, ShieldCheck, Clock, Sparkles, BookOpenText, Radio, Mic2, CreditCard,
 } from 'lucide-react';
 import * as bridge from '../lib/bridge';
 import { useAsync } from '../lib/hooks';
@@ -16,6 +16,7 @@ const QUICK = [
     { to: '/questions', label: 'أسئلة إسلامية', icon: BrainCircuit, color: '#ea580c', bg: 'rgba(234,88,12,.1)' },
     { to: '/adhkar', label: 'الأذكار', icon: Hand, color: 'var(--accent)', bg: 'var(--accent-soft)' },
     { to: '/reciters', label: 'القراء', icon: Mic2, color: 'var(--accent)', bg: 'var(--accent-soft)' },
+    { to: '/quran-cards', label: 'بطاقات القرآن', icon: CreditCard, color: 'var(--gold)', bg: 'var(--gold-soft)' },
     { to: '/radio', label: 'الراديو', icon: Radio, color: 'var(--gold)', bg: 'var(--gold-soft)' },
     { to: '/hisn', label: 'حصن المسلم', icon: ShieldCheck, color: 'var(--gold)', bg: 'var(--gold-soft)' },
     { to: '/prayer', label: 'أوقات الصلاة', icon: Clock, color: '#3b82f6', bg: 'rgba(37,99,235,.1)' },

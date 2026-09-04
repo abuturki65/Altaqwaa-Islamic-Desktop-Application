@@ -26,6 +26,7 @@ import PrayerPage from './pages/PrayerPage';
 import TasbihPage from './pages/TasbihPage';
 import SettingsPage from './pages/SettingsPage';
 import AboutPage from './pages/AboutPage';
+import QuranCardsPage from './pages/QuranCardsPage';
 
 function applyFontSettings(settings) {
     const ui = (settings && typeof settings.font_family_ui === 'string' && settings.font_family_ui)
@@ -132,6 +133,8 @@ export default function App() {
         if (path === '/hisn') return <HisnPage />;
         if (path === '/prayer') return <PrayerPage />;
         if (path === '/tasbih') return <TasbihPage />;
+        if (path === '/quran-cards' && segs[1]) return <QuranCardsPage key={segs[1]} slug={decodeURIComponent(segs[1])} />;
+        if (path === '/quran-cards') return <QuranCardsPage />;
         if (path === '/settings') return <SettingsPage />;
         if (path === '/about') return <AboutPage />;
         return <Home />;

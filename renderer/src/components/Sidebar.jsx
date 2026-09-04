@@ -2,7 +2,7 @@ import React from 'react';
 import {
     Home, Search, ScrollText, Landmark, BookOpenCheck, BookOpen,
     Hand, ShieldCheck, Clock, Radio, Hash, Settings, BrainCircuit,
-    Wifi, WifiOff, Info, BookOpenText, Mic2,
+    Wifi, WifiOff, Info, BookOpenText, Mic2, CreditCard,
 } from 'lucide-react';
 import { navigate, useRoute } from '../lib/router';
 import { useNetwork } from '../lib/hooks';
@@ -21,6 +21,7 @@ const SECTIONS = [
             { to: '/quran', label: 'المصحف', icon: BookOpenCheck },
             { to: '/tafseer', label: 'التفسير الميسر', icon: BookOpenText },
             { to: '/reciters', label: 'القراء', icon: Mic2 },
+            { to: '/quran-cards', label: 'بطاقات القرآن', icon: CreditCard },
             { to: '/radio', label: 'الراديو', icon: Radio },
             { to: '/adhkar', label: 'الأذكار', icon: Hand },
             { to: '/hisn', label: 'حصن المسلم', icon: ShieldCheck },
