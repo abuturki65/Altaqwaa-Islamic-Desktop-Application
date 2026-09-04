@@ -85,7 +85,7 @@
     "publish": {
       "provider": "github",
       "owner": "rn0x",
-      "repo": "Altaqwaa-Islamic-Desktop-Application",
+      "repo": "altaqwaa-desktop",
       "protocol": "https"
     },
     "linux": {
