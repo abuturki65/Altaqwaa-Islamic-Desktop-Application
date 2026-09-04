@@ -25,7 +25,7 @@ jobs:
           cache: npm
 
       - name: تثبيت المكتبات
-        run: npm ci
+        run: npm install
 
       - name: بناء الواجهة (Vite)
         run: npm run build
@@ -61,7 +61,7 @@ jobs:
           cache: npm
 
       - name: تثبيت المكتبات
-        run: npm ci
+        run: npm install
 
       - name: بناء الواجهة (Vite)
         run: npm run build
@@ -94,7 +94,7 @@ jobs:
           cache: npm
 
       - name: تثبيت المكتبات
-        run: npm ci
+        run: npm install
 
       - name: بناء الواجهة (Vite)
         run: npm run build
