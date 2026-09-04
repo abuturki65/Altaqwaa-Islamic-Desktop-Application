@@ -18,6 +18,9 @@ jobs:
       - name: استنساخ المستودع
         uses: actions/checkout@v4
 
+      - name: تثبيت أدوات Linux
+        run: sudo apt-get update && sudo apt-get install -y dpkg fakeroot rpm
+
       - name: تثبيت Node.js
         uses: actions/setup-node@v4
         with:
@@ -31,7 +34,9 @@ jobs:
         run: npm run build
 
       - name: بناء حزم Linux
-        run: npx electron-builder --linux AppImage deb rpm tar.gz
+        run: npx electron-builder --linux AppImage deb rpm tar.gz --publish never
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: رفع الحزم
         uses: actions/upload-artifact@v4
@@ -67,7 +72,9 @@ jobs:
         run: npm run build
 
       - name: بناء حزم Windows
-        run: npx electron-builder --windows nsis portable
+        run: npx electron-builder --windows nsis portable --publish never
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: رفع الحزم
         uses: actions/upload-artifact@v4
@@ -100,7 +107,9 @@ jobs:
         run: npm run build
 
       - name: بناء حزمة macOS
-        run: npx electron-builder --mac dmg
+        run: npx electron-builder --mac dmg --publish never
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: رفع الحزمة
         uses: actions/upload-artifact@v4

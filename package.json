@@ -80,6 +80,10 @@
       {
         "from": "resources/library",
         "to": "library"
+      },
+      {
+        "from": "resources/fonts",
+        "to": "fonts"
       }
     ],
     "publish": {
@@ -147,9 +151,9 @@
       ]
     },
     "nsis": {
-      "oneClick": "false",
+      "oneClick": false,
       "perMachine": true,
-      "allowToChangeInstallationDirectory": "true",
+      "allowToChangeInstallationDirectory": true,
       "license": "./LICENSE",
       "shortcutName": "التقوى",
       "uninstallDisplayName": "التقوى",

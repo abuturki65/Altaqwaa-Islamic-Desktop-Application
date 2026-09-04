@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Altaqwaa
+Comment=Islamic Desktop Application
+Exec=altaqwaa %U
+Icon=altaqwaa
+Type=Application
+Categories=Education;Religion;
+Keywords=islam;quran;prayer;adhkar;
+MimeType=x-scheme-handler/altaqwaa;
