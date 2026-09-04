@@ -140,6 +140,18 @@ body {
     cursor: default;
 }
 
+
+input:focus,
+select:focus,
+textarea:focus,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: var(--border) !important;
+}
+
 ::selection { background: var(--accent-soft); }
 
 ::-webkit-scrollbar { width: 10px; height: 10px; }
