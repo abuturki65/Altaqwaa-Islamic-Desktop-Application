@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-09-20T08:18:46.613Z",
+  "updated_at": "2026-09-21T08:36:52.385Z",
   "github": {
     "repo": "rn0x/altaqwaa-desktop",
     "html_url": "https://github.com/rn0x/altaqwaa-desktop",
-    "stars": 270,
-    "forks": 33,
+    "stars": 272,
+    "forks": 34,
     "watchers": 8,
-    "total_downloads": 8799,
+    "total_downloads": 8800,
     "releases_count": 19,
     "assets_count": 140,
     "platforms": {
@@ -15,7 +15,7 @@
         "assets": 42
       },
       "linux": {
-        "downloads": 4930,
+        "downloads": 4931,
         "assets": 98
       }
     },
@@ -67,7 +67,7 @@
           {
             "name": "altaqwaa_4.0.1_amd64.deb",
             "size": 193961820,
-            "count": 33,
+            "count": 34,
             "url": "https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.1/altaqwaa_4.0.1_amd64.deb"
           },
           {
@@ -96,7 +96,7 @@
         "tag": "v4.0.1",
         "name": "v4.0.1",
         "published": "2026-09-04T03:11:28Z",
-        "downloads": 153,
+        "downloads": 154,
         "assets": 10,
         "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v4.0.1"
       },
