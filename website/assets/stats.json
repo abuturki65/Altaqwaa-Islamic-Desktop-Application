@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-10-30T09:38:54.708Z",
+  "updated_at": "2026-10-31T09:18:01.562Z",
   "github": {
     "repo": "rn0x/altaqwaa-desktop",
     "html_url": "https://github.com/rn0x/altaqwaa-desktop",
     "stars": 276,
     "forks": 35,
     "watchers": 8,
-    "total_downloads": 9092,
+    "total_downloads": 9105,
     "releases_count": 19,
     "assets_count": 140,
     "platforms": {
       "windows": {
-        "downloads": 3994,
+        "downloads": 3996,
         "assets": 42
       },
       "linux": {
-        "downloads": 5098,
+        "downloads": 5109,
         "assets": 98
       }
     },
@@ -49,7 +49,7 @@
           {
             "name": "Altaqwaa-4.0.1.AppImage",
             "size": 213788079,
-            "count": 76,
+            "count": 77,
             "url": "https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.1/Altaqwaa-4.0.1.AppImage"
           },
           {
@@ -61,13 +61,13 @@
           {
             "name": "altaqwaa-4.0.1.x86_64.rpm",
             "size": 173425389,
-            "count": 33,
+            "count": 34,
             "url": "https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.1/altaqwaa-4.0.1.x86_64.rpm"
           },
           {
             "name": "altaqwaa_4.0.1_amd64.deb",
             "size": 193961820,
-            "count": 73,
+            "count": 82,
             "url": "https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.1/altaqwaa_4.0.1_amd64.deb"
           },
           {
@@ -96,7 +96,7 @@
         "tag": "v4.0.1",
         "name": "v4.0.1",
         "published": "2026-09-04T03:11:28Z",
-        "downloads": 397,
+        "downloads": 408,
         "assets": 10,
         "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v4.0.1"
       },
@@ -104,7 +104,7 @@
         "tag": "v4.0.0",
         "name": "v4.0.0 ✨",
         "published": "2026-08-06T23:19:46Z",
-        "downloads": 180,
+        "downloads": 182,
         "assets": 10,
         "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v4.0.0"
       },
