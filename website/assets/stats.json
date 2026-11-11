@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-11-10T10:47:46.954Z",
+  "updated_at": "2026-11-11T10:23:35.600Z",
   "github": {
     "repo": "rn0x/altaqwaa-desktop",
     "html_url": "https://github.com/rn0x/altaqwaa-desktop",
     "stars": 276,
     "forks": 34,
     "watchers": 8,
-    "total_downloads": 9209,
+    "total_downloads": 9214,
     "releases_count": 19,
     "assets_count": 140,
     "platforms": {
       "windows": {
-        "downloads": 4035,
+        "downloads": 4036,
         "assets": 42
       },
       "linux": {
-        "downloads": 5174,
+        "downloads": 5178,
         "assets": 98
       }
     },
@@ -35,7 +35,7 @@
           {
             "name": "Altaqwaa.Setup.4.0.1.exe",
             "size": 197278466,
-            "count": 153,
+            "count": 154,
             "url": "https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.1/Altaqwaa.Setup.4.0.1.exe"
           }
         ],
@@ -67,7 +67,7 @@
           {
             "name": "altaqwaa_4.0.1_amd64.deb",
             "size": 193961820,
-            "count": 118,
+            "count": 119,
             "url": "https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.1/altaqwaa_4.0.1_amd64.deb"
           },
           {
@@ -79,7 +79,7 @@
           {
             "name": "latest-mac.yml",
             "size": 345,
-            "count": 3,
+            "count": 4,
             "url": "https://github.com/rn0x/altaqwaa-desktop/releases/download/v4.0.1/latest-mac.yml"
           },
           {
@@ -96,7 +96,7 @@
         "tag": "v4.0.1",
         "name": "v4.0.1",
         "published": "2026-09-04T03:11:28Z",
-        "downloads": 490,
+        "downloads": 493,
         "assets": 10,
         "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v4.0.1"
       },
@@ -128,7 +128,7 @@
         "tag": "v2.0.4",
         "name": "v2.0.4 ✨",
         "published": "2023-01-14T00:18:22Z",
-        "downloads": 335,
+        "downloads": 336,
         "assets": 8,
         "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v2.0.4"
       },
@@ -176,7 +176,7 @@
         "tag": "v1.0.9",
         "name": "v1.0.9✨",
         "published": "2022-05-03T04:50:44Z",
-        "downloads": 293,
+        "downloads": 294,
         "assets": 7,
         "url": "https://github.com/rn0x/altaqwaa-desktop/releases/tag/v1.0.9"
       },
